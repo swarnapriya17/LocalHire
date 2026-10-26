@@ -54,34 +54,35 @@ export default function ProtectedRoute({ children, allowedRoles = [] }) {
       <div style={{ maxWidth: '640px', margin: '4rem auto', padding: '2rem' }}>
         <div 
           style={{
-            background: '#111A2E',
-            border: '1px solid rgba(239, 68, 68, 0.35)',
+            background: '#FFFFFF',
+            border: '1px solid #FECACA',
             borderRadius: 16,
             padding: '2.5rem',
             textAlign: 'center',
-            boxShadow: '0 12px 32px rgba(0, 0, 0, 0.5)'
+            boxShadow: '0 12px 32px rgba(23, 54, 93, 0.08)'
           }}
         >
           <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>⛔</div>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#F8FAFC', marginBottom: '0.5rem' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#17365D', marginBottom: '0.5rem' }}>
             Access Restricted
           </h2>
-          <p style={{ color: '#94A3B8', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+          <p style={{ color: '#526B85', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
             You are signed in as <strong>{user.name}</strong> with the account role{' '}
-            <span style={{ color: '#A78BFA', fontWeight: 700 }}>"{user.role}"</span>.
+            <span style={{ color: '#0F766E', fontWeight: 700 }}>"{user.role}"</span>.
             This area requires one of the following roles: [{allowedRoles.join(', ')}].
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link
               to={userDashboardPath}
               style={{
-                background: 'linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%)',
+                background: 'var(--primary-teal, #0F9D96)',
                 color: '#FFFFFF',
                 padding: '0.75rem 1.5rem',
                 borderRadius: 8,
                 fontWeight: 700,
                 fontSize: '0.92rem',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                boxShadow: '0 4px 14px rgba(15, 157, 150, 0.25)',
               }}
             >
               Go to Your Authorized Dashboard →
@@ -89,14 +90,14 @@ export default function ProtectedRoute({ children, allowedRoles = [] }) {
             <Link
               to="/"
               style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                color: '#F8FAFC',
+                background: '#FFFFFF',
+                border: '1px solid #E1EDF3',
+                color: '#17365D',
                 padding: '0.75rem 1.25rem',
                 borderRadius: 8,
                 fontWeight: 600,
                 fontSize: '0.92rem',
-                textDecoration: 'none'
+                textDecoration: 'none',
               }}
             >
               Return Home

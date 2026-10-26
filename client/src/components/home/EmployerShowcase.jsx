@@ -105,27 +105,27 @@ export default function EmployerShowcase({ onOpenPostJob }) {
           }
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            <div style={{ background: 'rgba(245, 158, 11, 0.12)', border: '1px solid rgba(245, 158, 11, 0.35)', padding: '0.85rem', borderRadius: 8, fontSize: '0.85rem', color: '#FCD34D' }}>
+            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', padding: '0.85rem', borderRadius: 8, fontSize: '0.85rem', color: '#92400E' }}>
               ℹ️ <strong>{t('common.notes', 'Notice')}:</strong> {t('employers.disclaimer', 'This profile is an illustrative mockup.')}
             </div>
 
             <div>
-              <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#F8FAFC', marginBottom: '0.4rem' }}>
+              <h4 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.4rem' }}>
                 {t('common.view', 'About the Organization')}
               </h4>
-              <p style={{ color: '#94A3B8', fontSize: '0.92rem', lineHeight: 1.6 }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', lineHeight: 1.6 }}>
                 {activeEmployer.about}
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', background: 'rgba(11, 16, 32, 0.6)', padding: '1rem', borderRadius: 8 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)', padding: '1rem', borderRadius: 8 }}>
               <div>
-                <span style={{ fontSize: '0.72rem', color: '#64748B', textTransform: 'uppercase', display: 'block' }}>{t('profile.locationLabel', 'Headquarters')}</span>
-                <span style={{ fontWeight: 600, color: '#F8FAFC' }}>{activeEmployer.town}, {t('nav.region', 'West Godavari')}</span>
+                <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>{t('profile.locationLabel', 'Headquarters')}</span>
+                <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{activeEmployer.town}, {t('nav.region', 'West Godavari')}</span>
               </div>
               <div>
-                <span style={{ fontSize: '0.72rem', color: '#64748B', textTransform: 'uppercase', display: 'block' }}>{t('employers.team', 'Company Size')}</span>
-                <span style={{ fontWeight: 600, color: '#F8FAFC' }}>{activeEmployer.employeeCount}</span>
+                <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>{t('employers.team', 'Company Size')}</span>
+                <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{activeEmployer.employeeCount}</span>
               </div>
             </div>
           </div>

@@ -1,46 +1,56 @@
 :root {
-  /* Main Theme Color Palette */
-  --bg-primary: #F8FAFC;        /* Main background */
-  --bg-secondary: #F1F5F9;      /* Subtle light-grey section background */
+  /* Main Theme Color Palette — White + Teal + Lavender Reference Design */
+  --bg-primary: #FFFFFF;        /* Main background */
+  --bg-secondary: #F5FAFC;      /* Soft section background */
   --bg-card: #FFFFFF;           /* Card and panel background */
-  --bg-card-hover: #F8FAFC;     /* Card hover background */
-  --bg-light-blue: #EFF6FF;     /* Light-blue background */
+  --bg-card-hover: #F8FCFD;     /* Card hover background */
   --bg-surface: #FFFFFF;
+  --bg-teal-subtle: #E9F9F8;    /* Light teal chips & badges */
+  --bg-lavender-subtle: #F3EFFF;/* Soft lavender background */
 
-  /* Primary Blue Accents */
-  --accent-primary: #2563EB;     /* Primary blue */
-  --accent-hover: #1D4ED8;       /* Primary blue hover */
-  --accent-light: #3B82F6;       /* Bright blue */
-  --accent-subtle: #EFF6FF;      /* Light blue badge background */
-  --accent-glow: rgba(37, 99, 235, 0.15); /* Soft blue shadow */
+  /* Primary Teal Accents */
+  --accent-primary: #0F9D96;     /* Primary teal */
+  --accent-hover: #0F766E;       /* Dark teal */
+  --accent-light: #14B8A6;       /* Bright teal */
+  --accent-subtle: #E9F9F8;      /* Light teal badge background */
+  --accent-glow: rgba(15, 157, 150, 0.2); /* Soft teal shadow */
+
+  /* Lavender Accents */
+  --accent-lavender: #8B5CF6;        /* Lavender accent */
+  --accent-lavender-hover: #7C3AED;  /* Deep lavender */
+  --accent-lavender-light: #A78BFA;  /* Lavender glow */
+  --accent-lavender-subtle: #F3EFFF; /* Soft lavender badge */
+  --accent-lavender-glow: rgba(139, 92, 246, 0.2);
 
   /* Status Colors */
-  --status-success: #16A34A;
-  --status-success-bg: #DCFCE7;
+  --status-success: #0D9488;
+  --status-success-bg: #E6FFFA;
   --status-warning: #D97706;
   --status-warning-bg: #FEF3C7;
-  --status-error: #DC2626;
-  --status-error-bg: #FEE2E2;
+  --status-error: #E11D48;
+  --status-error-bg: #FFE4E6;
 
-  /* Typography Colors */
-  --text-main: #172033;         /* Main headings */
-  --text-muted: #475569;        /* Body text */
-  --text-dim: #64748B;          /* Secondary text */
-  --text-accent: #2563EB;       /* Accent link/highlight text */
-  --text-inverse: #FFFFFF;      /* Text on dark buttons */
+  /* Typography Colors (High-Contrast & Legible) */
+  --text-main: #17365D;         /* Dark Navy for main headings & readable text */
+  --text-muted: #526B85;        /* Secondary slate text */
+  --text-dim: #71889E;          /* Tertiary placeholder & meta text */
+  --text-accent: #0F9D96;       /* Primary teal accent link text */
+  --text-lavender: #8B5CF6;     /* Lavender accent text */
+  --text-inverse: #FFFFFF;      /* Text on primary teal/lavender buttons */
 
   /* Borders & Dividers */
-  --border-subtle: #E2E8F0;     /* Borders */
-  --border-card: #E2E8F0;       /* Card borders */
-  --border-active: #93C5FD;     /* Active blue border */
-  --border-focus: #2563EB;      /* Focused input border */
+  --border-subtle: #E1EDF3;     /* Subtle borders */
+  --border-card: #E1EDF3;       /* Card borders */
+  --border-active: #0F9D96;     /* Active teal border */
+  --border-focus: #0F9D96;      /* Focused input border */
+  --border-lavender: #DDD6FE;   /* Lavender border */
 
   /* Shadows & Elevations */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 4px 12px rgba(37, 99, 235, 0.12);
-  --shadow-glow-intense: 0 8px 24px rgba(37, 99, 235, 0.18);
+  --shadow-sm: 0 1px 3px rgba(23, 54, 93, 0.05), 0 1px 2px rgba(23, 54, 93, 0.03);
+  --shadow-md: 0 4px 12px rgba(23, 54, 93, 0.06), 0 2px 4px rgba(23, 54, 93, 0.04);
+  --shadow-lg: 0 12px 28px rgba(23, 54, 93, 0.08), 0 4px 8px rgba(23, 54, 93, 0.04);
+  --shadow-glow: 0 4px 16px rgba(15, 157, 150, 0.2);
+  --shadow-glow-lavender: 0 4px 16px rgba(139, 92, 246, 0.2);
 
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;

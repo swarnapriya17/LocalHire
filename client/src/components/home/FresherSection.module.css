@@ -5,16 +5,11 @@
 }
 
 .boxContainer {
-  background: 
-    radial-gradient(circle at 10% 10%, rgba(124, 58, 237, 0.2), transparent 40%),
-    radial-gradient(circle at 90% 90%, rgba(167, 139, 250, 0.12), transparent 45%),
-    rgba(17, 26, 46, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-active);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: 3rem 2.5rem;
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 8px 30px rgba(23, 54, 93, 0.06);
 }
 
 .headerRow {
@@ -32,9 +27,9 @@
   gap: 0.4rem;
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #34D399;
+  background: var(--bg-lavender-subtle);
+  border: 1px solid var(--border-lavender);
+  color: var(--accent-lavender);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -45,6 +40,7 @@
 .title {
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   font-weight: 800;
+  color: var(--text-main);
   letter-spacing: -0.025em;
   margin-bottom: 0.5rem;
 }
@@ -65,13 +61,20 @@
 }
 
 .advantageCard {
-  background: rgba(11, 16, 32, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.advantageCard:hover {
+  border-color: var(--accent-primary);
+  background: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(23, 54, 93, 0.06);
 }
 
 .advIcon {
@@ -100,91 +103,114 @@
 }
 
 .fresherCard {
-  background: rgba(11, 16, 32, 0.8);
-  border: 1px solid rgba(167, 139, 250, 0.2);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all var(--transition-normal);
+  box-shadow: 0 2px 8px rgba(23, 54, 93, 0.04);
 }
 
 .fresherCard:hover {
-  transform: translateY(-3px);
-  border-color: #A78BFA;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 24px rgba(23, 54, 93, 0.08);
 }
 
-.fresherRole {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 0.4rem;
-}
-
-.fresherCompany {
-  font-size: 0.88rem;
-  color: var(--accent-light);
-  font-weight: 600;
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 0.75rem;
 }
 
-.fresherMeta {
+.cardTag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+  background: var(--bg-teal-subtle);
+  border: 1px solid #C4F1EE;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.cardTown {
+  font-size: 0.8rem;
+  color: var(--text-muted);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.82rem;
-  color: var(--text-muted);
+  gap: 0.25rem;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.fresherCard:hover .cardTitle {
+  color: var(--accent-primary);
+}
+
+.cardCompany {
+  font-size: 0.88rem;
+  color: var(--accent-hover);
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.fresherStipend {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #34D399;
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
 }
 
-.viewFresherBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+.stipend {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent-hover);
+}
+
+.viewAction {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--accent-light);
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: color var(--transition-fast);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.viewFresherBtn:hover {
-  color: #FFFFFF;
-}
-
-.fresherCtaRow {
+.ctaRow {
   text-align: center;
 }
 
-.allFreshersBtn {
+.filterAllBtn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.85rem;
+  padding: 0.85rem 2rem;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  background: var(--accent-primary);
   color: #FFFFFF;
-  font-weight: 700;
   font-size: 0.95rem;
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+  font-weight: 700;
+  box-shadow: 0 4px 16px var(--accent-glow);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
-.allFreshersBtn:hover {
-  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
-  box-shadow: 0 6px 22px rgba(16, 185, 129, 0.5);
+.filterAllBtn:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 6px 20px var(--accent-glow);
   transform: translateY(-1px);
 }
 

@@ -155,8 +155,8 @@ export default function JobDetailsModal({ job, isOpen, onClose, isSaved, onToggl
               <span>📝</span> {t('modals.jobDetails.submitApplication', 'Submit Application')} — {job.title}
             </div>
 
-            <div style={{ fontSize: '0.82rem', color: '#94A3B8', background: 'rgba(255, 255, 255, 0.04)', padding: '0.75rem', borderRadius: 8 }}>
-              {t('common.status', 'Applying as')}: <strong style={{ color: '#F8FAFC' }}>{user?.name}</strong> ({user?.email}) • {t('nav.region', 'West Godavari')}
+            <div style={{ fontSize: '0.82rem', color: '#526B85', background: '#FFFFFF', border: '1px solid #E1EDF3', padding: '0.75rem', borderRadius: 8 }}>
+              {t('common.status', 'Applying as')}: <strong style={{ color: '#17365D' }}>{user?.name}</strong> ({user?.email}) • {t('nav.region', 'West Godavari')}
             </div>
 
             {errorMessage && (

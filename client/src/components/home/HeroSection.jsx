@@ -58,17 +58,18 @@ export default function HeroSection({ onSearch, onPostJobClick, onExploreClick, 
           {t('hero.badge', 'West Godavari Employment Network')}
         </div>
 
-        {/* Headlines */}
+        {/* Headlines: "Local Jobs. Limitless Opportunities." with Limitless in Teal and Opportunities in Lavender */}
         <h1 className={`${styles.mainTitle} ${isRevealed ? styles.staggerTitle : ''}`}>
-          <span className={styles.titleLight}>{t('hero.titleLight', 'Local Jobs.')} </span>
-          <span className={styles.titleAccent}>{t('hero.titleAccent', 'Limitless Opportunities.')}</span>
+          <span className={styles.titleMain}>{t('hero.titleLight', 'Local Jobs.')} </span>
+          <span className={styles.titleTeal}>{t('hero.titleLimitless', 'Limitless')} </span>
+          <span className={styles.titleLavender}>{t('hero.titleOpportunities', 'Opportunities.')}</span>
         </h1>
 
         <p className={`${styles.subDescription} ${isRevealed ? styles.staggerDesc : ''}`}>
           {t('hero.subDescription', 'The dedicated employment portal connecting regional talent with verified employers across Bhimavaram, Eluru, Tadepalligudem, Tanuku, Palakollu, and surrounding mandals. Empowering fresh graduates, skilled professionals, and local enterprises.')}
         </p>
 
-        {/* Search Interface */}
+        {/* Prominent White Search Interface */}
         <div className={`${styles.searchBoxContainer} ${isRevealed ? styles.staggerSearch : ''}`}>
           <form className={styles.searchForm} onSubmit={handleSubmit} role="search">
             <div className={styles.inputGroup}>
@@ -106,19 +107,21 @@ export default function HeroSection({ onSearch, onPostJobClick, onExploreClick, 
           </form>
         </div>
 
-        {/* Suggested Searches & Quick Tags */}
+        {/* Suggested Searches & Rounded Light-Teal Chips */}
         <div className={`${styles.quickFiltersWrapper} ${isRevealed ? styles.staggerQuick : ''}`}>
           <span className={styles.quickLabel}>{t('hero.popularSearches', 'Popular Searches:')}</span>
-          {QUICK_SEARCHES.map((tag) => (
-            <button
-              key={tag}
-              type="button"
-              className={styles.quickTag}
-              onClick={() => handleQuickTagClick(tag)}
-            >
-              {tag}
-            </button>
-          ))}
+          <div className={styles.quickTagsList}>
+            {QUICK_SEARCHES.map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                className={styles.quickTag}
+                onClick={() => handleQuickTagClick(tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* CTAs */}

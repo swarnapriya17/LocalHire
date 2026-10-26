@@ -102,6 +102,8 @@ const en = {
     badge: 'West Godavari Employment Network',
     titleLight: 'Local Jobs.',
     titleAccent: 'Limitless Opportunities.',
+    titleLimitless: 'Limitless',
+    titleOpportunities: 'Opportunities.',
     subDescription: 'The dedicated employment portal connecting regional talent with verified employers across Bhimavaram, Eluru, Tadepalligudem, Tanuku, Palakollu, and surrounding mandals. Empowering fresh graduates, skilled professionals, and local enterprises.',
     searchPlaceholder: 'Job title, skills, or company (e.g. React, Accountant, Nurse)...',
     allLocations: 'All West Godavari Mandals',
@@ -109,6 +111,21 @@ const en = {
     popularSearches: 'Popular Searches:',
     exploreCta: 'Explore Latest Vacancies',
     employerCta: 'Verified Employer Registration',
+  },
+
+  // Benefits Section
+  benefits: {
+    badge: 'Why LocalHire',
+    title: 'Connecting West Godavari with Limitless Opportunities',
+    subtitle: 'Built from the ground up for our district’s employers, graduates, and skilled professionals.',
+    verifiedEmployersTitle: 'Verified Regional Employers',
+    verifiedEmployersDesc: 'Pre-screened local enterprises, hospitals, colleges & tech firms ensure genuine, legitimate job offers.',
+    localOpportunitiesTitle: 'Hyper-Local Opportunities',
+    localOpportunitiesDesc: 'Work in Bhimavaram, Eluru, Tadepalligudem, Tanuku, Palakollu & Narsapur without metro living expenses.',
+    careerGrowthTitle: 'Accelerated Career Growth',
+    careerGrowthDesc: 'Dedicated launchpad for fresh graduates with project recognition and direct company interviews.',
+    supportTitle: 'Bilingual Support & AI Career Prep',
+    supportDesc: 'Seamless English & Telugu interface with AI resume review, STAR interview practice, and real-time tracking.',
   },
 
   // Early Career / Freshers Section

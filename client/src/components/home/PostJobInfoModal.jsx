@@ -117,7 +117,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
         {errorMessage && (
-          <div style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.35)', padding: '0.75rem 1rem', borderRadius: 8, color: '#FCA5A5', fontSize: '0.86rem' }}>
+          <div style={{ background: '#FEE2E2', border: '1px solid #FECACA', padding: '0.75rem 1rem', borderRadius: 8, color: '#DC2626', fontSize: '0.86rem' }}>
             ⚠️ {errorMessage}
           </div>
         )}
@@ -125,7 +125,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('profile.jobTitleLabel', 'Job Title')} *
               </label>
               <input
@@ -137,11 +137,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: 'rgba(11, 16, 32, 0.8)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -149,7 +149,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
             </div>
 
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('profile.companyLabel', 'Company / Organization Name')} *
               </label>
               <input
@@ -161,11 +161,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: 'rgba(11, 16, 32, 0.8)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -175,7 +175,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('profile.locationLabel', 'West Godavari Location')} *
               </label>
               <select
@@ -184,11 +184,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: '#111A2E',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -204,7 +204,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
             </div>
 
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 Area / Landmark Details
               </label>
               <input
@@ -215,11 +215,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: 'rgba(11, 16, 32, 0.8)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -229,7 +229,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('profile.targetCategoryLabel', 'Career Sector')} *
               </label>
               <select
@@ -238,11 +238,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: '#111A2E',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -259,7 +259,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
             </div>
 
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('profile.employmentTypeLabel', 'Employment Type')}
               </label>
               <select
@@ -268,11 +268,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: '#111A2E',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -285,7 +285,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
             </div>
 
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('profile.workModeLabel', 'Work Mode')}
               </label>
               <select
@@ -294,11 +294,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: '#111A2E',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -312,7 +312,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('profile.expectedSalaryLabel', 'Salary / Compensation')}
               </label>
               <input
@@ -323,11 +323,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: 'rgba(11, 16, 32, 0.8)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -335,7 +335,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
             </div>
 
             <div>
-              <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
                 {t('jobs.experienceLevel', 'Experience Required')}
               </label>
               <input
@@ -346,11 +346,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
                 onChange={handleChange}
                 style={{
                   width: '100%',
-                  background: 'rgba(11, 16, 32, 0.8)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
                   borderRadius: 8,
                   padding: '0.65rem 0.85rem',
-                  color: '#F8FAFC',
+                  color: '#17365D',
                   fontSize: '0.9rem',
                   outline: 'none',
                 }}
@@ -358,7 +358,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
             </div>
           </div>
 
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.85rem', color: '#E2E8F0' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.85rem', color: '#17365D', fontWeight: 500 }}>
             <input
               type="checkbox"
               name="isFresher"
@@ -369,7 +369,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
           </label>
 
           <div>
-            <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+            <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
               {t('jobs.responsibilities', 'Job Description & Responsibilities')} *
             </label>
             <textarea
@@ -381,11 +381,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
               onChange={handleChange}
               style={{
                 width: '100%',
-                background: 'rgba(11, 16, 32, 0.8)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
+                background: '#FFFFFF',
+                border: '1px solid #E1EDF3',
                 borderRadius: 8,
                 padding: '0.65rem 0.85rem',
-                color: '#F8FAFC',
+                color: '#17365D',
                 fontSize: '0.88rem',
                 outline: 'none',
                 resize: 'vertical',
@@ -394,7 +394,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
           </div>
 
           <div>
-            <label style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'block', marginBottom: '0.25rem' }}>
+            <label style={{ fontSize: '0.82rem', fontWeight: 600, color: '#526B85', display: 'block', marginBottom: '0.25rem' }}>
               {t('jobs.requirements', 'Candidate Qualifications & Key Skills')} ({t('common.optional', 'Optional')})
             </label>
             <textarea
@@ -405,11 +405,11 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
               onChange={handleChange}
               style={{
                 width: '100%',
-                background: 'rgba(11, 16, 32, 0.8)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
+                background: '#FFFFFF',
+                border: '1px solid #E1EDF3',
                 borderRadius: 8,
                 padding: '0.65rem 0.85rem',
-                color: '#F8FAFC',
+                color: '#17365D',
                 fontSize: '0.88rem',
                 outline: 'none',
                 resize: 'vertical',
@@ -422,7 +422,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
             disabled={isSubmitting}
             style={{
               marginTop: '0.5rem',
-              background: 'linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%)',
+              background: 'var(--primary-teal, #0F9D96)',
               border: 'none',
               borderRadius: 8,
               padding: '0.8rem',
@@ -431,6 +431,7 @@ export default function PostJobInfoModal({ isOpen, onClose, onShowToast, onJobCr
               fontSize: '0.95rem',
               cursor: isSubmitting ? 'not-allowed' : 'pointer',
               opacity: isSubmitting ? 0.7 : 1,
+              boxShadow: '0 4px 14px rgba(15, 157, 150, 0.25)',
             }}
           >
             {isSubmitting ? t('common.loading', 'Publishing Opening...') : `${t('recruiter.postNewJob', 'Publish Job Opening')} →`}

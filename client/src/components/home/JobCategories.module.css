@@ -15,11 +15,11 @@
   gap: 0.4rem;
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
-  background: rgba(124, 58, 237, 0.12);
-  border: 1px solid rgba(124, 58, 237, 0.28);
-  color: var(--accent-light);
+  background: var(--bg-teal-subtle);
+  border: 1px solid #C4F1EE;
+  color: var(--accent-hover);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -28,6 +28,7 @@
 .sectionTitle {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 800;
+  color: var(--text-main);
   letter-spacing: -0.025em;
   margin-bottom: 0.75rem;
 }
@@ -47,10 +48,8 @@
 }
 
 .categoryCard {
-  background: var(--bg-card);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border-card);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   text-align: left;
@@ -61,19 +60,19 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(23, 54, 93, 0.04);
 }
 
 .categoryCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(167, 139, 250, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(124, 58, 237, 0.25);
-  background: var(--bg-card-hover);
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 24px rgba(23, 54, 93, 0.08);
 }
 
 .categoryActive {
-  border-color: #A78BFA;
-  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
-  background: rgba(23, 34, 60, 0.95);
+  border-color: var(--accent-primary);
+  background: var(--bg-teal-subtle);
+  box-shadow: 0 4px 16px var(--accent-glow);
 }
 
 .topRow {
@@ -87,8 +86,8 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background: rgba(124, 58, 237, 0.12);
-  border: 1px solid rgba(124, 58, 237, 0.25);
+  background: var(--bg-teal-subtle);
+  border: 1px solid #C4F1EE;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,13 +97,15 @@
 
 .categoryCard:hover .iconWrapper {
   transform: scale(1.08);
+  background: #FFFFFF;
 }
 
 .jobCountPill {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--accent-light);
-  background: rgba(124, 58, 237, 0.15);
+  color: var(--accent-hover);
+  background: var(--bg-teal-subtle);
+  border: 1px solid #C4F1EE;
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
 }
@@ -129,10 +130,17 @@
   gap: 0.4rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--accent-light);
+  color: var(--accent-primary);
   margin-top: auto;
+  transition: color var(--transition-fast);
 }
 
 .categoryCard:hover .cardFooter {
-  color: #DDD6FE;
+  color: var(--accent-hover);
+}
+
+@media (max-width: 640px) {
+  .sectionWrapper {
+    padding: 3.5rem 1.25rem;
+  }
 }

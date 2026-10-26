@@ -5,19 +5,19 @@
   justify-content: center;
   padding: 3rem 1.5rem;
   background: 
-    radial-gradient(circle at 85% 20%, rgba(124, 58, 237, 0.18) 0%, transparent 40%),
-    radial-gradient(circle at 15% 80%, rgba(167, 139, 250, 0.12) 0%, transparent 45%),
-    #0B1020;
+    radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 15% 80%, rgba(15, 157, 150, 0.08) 0%, transparent 45%),
+    #F5FAFC;
 }
 
 .authCard {
-  background: #111A2E;
-  border: 1px solid var(--border-active);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
   padding: 2.75rem 2.25rem;
   width: 100%;
   max-width: 480px;
-  box-shadow: var(--shadow-lg), 0 0 50px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 10px 30px rgba(23, 54, 93, 0.08);
   position: relative;
   overflow: hidden;
 }
@@ -28,8 +28,8 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #7C3AED, #A78BFA, transparent);
+  height: 3px;
+  background: linear-gradient(90deg, #0F9D96, #8B5CF6, #0F9D96);
 }
 
 .header {
@@ -43,9 +43,9 @@
   gap: 0.4rem;
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-  background: rgba(124, 58, 237, 0.15);
-  border: 1px solid rgba(167, 139, 250, 0.35);
-  color: var(--accent-light);
+  background: #E9F9F8;
+  border: 1px solid #A7F3D0;
+  color: #0F766E;
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -56,7 +56,7 @@
 .title {
   font-size: 1.85rem;
   font-weight: 800;
-  color: #F8FAFC;
+  color: var(--text-main);
   letter-spacing: -0.025em;
   margin-bottom: 0.4rem;
 }
@@ -67,11 +67,11 @@
 }
 
 .errorAlert {
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.35);
+  background: #FEE2E2;
+  border: 1px solid #FECACA;
   border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
-  color: #FCA5A5;
+  color: #DC2626;
   font-size: 0.88rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -81,11 +81,11 @@
 }
 
 .dbNoticeAlert {
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
   border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
-  color: #FCD34D;
+  color: #92400E;
   font-size: 0.85rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -120,8 +120,8 @@
 
 .input {
   width: 100%;
-  background: rgba(11, 16, 32, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
   color: var(--text-main);
@@ -132,8 +132,8 @@
 }
 
 .input:focus {
-  border-color: var(--accent-light);
-  box-shadow: 0 0 12px rgba(124, 58, 237, 0.25);
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(15, 157, 150, 0.15);
 }
 
 .inputWithBtn {
@@ -164,19 +164,20 @@
   gap: 0.5rem;
   padding: 0.85rem;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--accent-primary) 0%, #6D28D9 100%);
+  background: var(--primary-teal);
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: 700;
-  box-shadow: 0 4px 16px var(--accent-glow);
+  border: none;
+  box-shadow: 0 4px 14px rgba(15, 157, 150, 0.25);
   cursor: pointer;
   transition: all var(--transition-fast);
   margin-top: 0.5rem;
 }
 
 .submitBtn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #8B5CF6 0%, var(--accent-primary) 100%);
-  box-shadow: 0 6px 22px rgba(124, 58, 237, 0.5);
+  background: var(--teal-dark);
+  box-shadow: 0 6px 20px rgba(15, 157, 150, 0.35);
   transform: translateY(-1px);
 }
 
@@ -189,31 +190,31 @@
   text-align: center;
   margin-top: 1.75rem;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
   color: var(--text-muted);
 }
 
 .switchLink {
-  color: var(--accent-light);
-  font-weight: 600;
+  color: var(--primary-teal);
+  font-weight: 700;
   text-decoration: none;
   margin-left: 0.35rem;
 }
 
 .switchLink:hover {
   text-decoration: underline;
-  color: #DDD6FE;
+  color: var(--teal-dark);
 }
 
 .adminHint {
   margin-top: 1rem;
   padding: 0.6rem 0.85rem;
-  background: rgba(11, 16, 32, 0.5);
+  background: #F5FAFC;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
   font-size: 0.78rem;
-  color: var(--text-dim);
+  color: var(--text-muted);
   text-align: center;
 }
 

@@ -5,14 +5,11 @@
 }
 
 .cardContainer {
-  background: 
-    radial-gradient(circle at 85% 15%, rgba(167, 139, 250, 0.18), transparent 40%),
-    radial-gradient(circle at 15% 85%, rgba(124, 58, 237, 0.22), transparent 45%),
-    #111A2E;
-  border: 1px solid var(--border-active);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5FAFC 60%, #F3EFFF 100%);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
   padding: 3rem;
-  box-shadow: var(--shadow-lg), 0 0 50px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 10px 30px rgba(23, 54, 93, 0.06);
   position: relative;
   overflow: hidden;
 }
@@ -23,8 +20,8 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #7C3AED, #A78BFA, #EC4899, transparent);
+  height: 3px;
+  background: linear-gradient(90deg, #0F9D96, #8B5CF6, #0F9D96);
 }
 
 .headerRow {
@@ -39,9 +36,9 @@
   gap: 0.4rem;
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
-  background: rgba(124, 58, 237, 0.15);
-  border: 1px solid rgba(167, 139, 250, 0.35);
-  color: var(--accent-light);
+  background: #F3EFFF;
+  border: 1px solid #DDD6FE;
+  color: var(--accent-lavender);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -53,44 +50,18 @@
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 800;
   letter-spacing: -0.025em;
+  color: var(--text-main);
   margin-bottom: 0.75rem;
 }
 
 .titleHighlight {
-  background: linear-gradient(135deg, #A78BFA 0%, #C084FC 50%, #F472B6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-teal);
 }
 
 .subtitle {
   color: var(--text-muted);
   font-size: 0.98rem;
   line-height: 1.6;
-}
-
-/* Honest Disclosure Alert */
-.disclosureNotice {
-  background: rgba(11, 16, 32, 0.85);
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  border-radius: var(--radius-md);
-  padding: 0.85rem 1.25rem;
-  margin-bottom: 2.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.85rem;
-  color: #C4B5FD;
-}
-
-.disclosureTag {
-  background: rgba(124, 58, 237, 0.3);
-  color: #FFFFFF;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  flex-shrink: 0;
 }
 
 /* Feature Tabs */
@@ -109,38 +80,41 @@
   gap: 0.5rem;
   padding: 0.65rem 1.25rem;
   border-radius: var(--radius-md);
-  background: rgba(11, 16, 32, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   color: var(--text-muted);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
+  box-shadow: 0 2px 4px rgba(23, 54, 93, 0.03);
 }
 
 .tabBtn:hover {
-  background: rgba(23, 34, 60, 0.8);
+  background: #F5FAFC;
   color: var(--text-main);
+  border-color: var(--primary-teal);
 }
 
 .tabActive {
-  background: rgba(124, 58, 237, 0.2);
-  border-color: #A78BFA;
-  color: #FFFFFF;
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  background: #F3EFFF;
+  border-color: var(--accent-lavender);
+  color: var(--accent-lavender);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
 }
 
 /* Preview Sandbox Panel */
 .previewBox {
-  background: rgba(11, 16, 32, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
   margin-bottom: 2.5rem;
+  box-shadow: 0 4px 16px rgba(23, 54, 93, 0.04);
 }
 
 .previewLeft {
@@ -180,17 +154,17 @@
 }
 
 .featureCheck {
-  color: #10B981;
+  color: var(--primary-teal);
   font-weight: 700;
 }
 
 /* Right Interactive Demo Card */
 .mockUiCard {
-  background: #17223C;
-  border: 1px solid rgba(167, 139, 250, 0.25);
+  background: #F5FAFC;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 1.5rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 2px 8px rgba(23, 54, 93, 0.04);
 }
 
 .mockHeader {
@@ -199,16 +173,17 @@
   justify-content: space-between;
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .mockBadge {
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--accent-light);
-  background: rgba(124, 58, 237, 0.2);
-  padding: 0.2rem 0.5rem;
+  color: var(--accent-lavender);
+  background: #F3EFFF;
+  border: 1px solid #DDD6FE;
+  padding: 0.25rem 0.55rem;
   border-radius: var(--radius-sm);
 }
 
@@ -226,7 +201,7 @@
   flex-wrap: wrap;
   gap: 1.25rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border-color);
 }
 
 .waitlistText {
@@ -236,6 +211,8 @@
 
 .waitlistText strong {
   color: var(--text-main);
+  display: block;
+  margin-bottom: 0.2rem;
 }
 
 .waitlistForm {
@@ -246,8 +223,8 @@
 }
 
 .waitlistInput {
-  background: rgba(11, 16, 32, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 0.65rem 1rem;
   color: var(--text-main);
@@ -255,10 +232,11 @@
   font-family: var(--font-body);
   outline: none;
   min-width: 250px;
+  transition: border-color var(--transition-fast);
 }
 
 .waitlistInput:focus {
-  border-color: var(--accent-light);
+  border-color: var(--primary-teal);
 }
 
 .waitlistBtn {
@@ -267,16 +245,17 @@
   gap: 0.4rem;
   padding: 0.65rem 1.35rem;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--accent-primary) 0%, #6D28D9 100%);
+  background: var(--primary-teal);
   color: #FFFFFF;
   font-weight: 600;
   font-size: 0.9rem;
+  border: none;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .waitlistBtn:hover {
-  background: linear-gradient(135deg, #8B5CF6 0%, var(--accent-primary) 100%);
+  background: var(--teal-dark);
   transform: translateY(-1px);
 }
 

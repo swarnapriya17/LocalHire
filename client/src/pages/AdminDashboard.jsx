@@ -509,11 +509,11 @@ export default function AdminDashboard() {
                           {summary.recentlyRegisteredUsers.map((u) => (
                             <tr key={u._id}>
                               <td>
-                                <strong style={{ color: '#F8FAFC' }}>{u.name}</strong>
-                                <div style={{ fontSize: '0.78rem', color: '#94A3B8' }}>{u.email}</div>
+                                <strong style={{ color: '#17365D' }}>{u.name}</strong>
+                                <div style={{ fontSize: '0.78rem', color: '#526B85' }}>{u.email}</div>
                               </td>
                               <td>
-                                <span className={styles.badge} style={{ background: 'rgba(255,255,255,0.06)' }}>
+                                <span className={styles.badge} style={{ background: '#F1F5F9', color: '#17365D', border: '1px solid #E1EDF3' }}>
                                   {u.role}
                                 </span>
                               </td>
@@ -532,7 +532,7 @@ export default function AdminDashboard() {
                       </table>
                     </div>
                   ) : (
-                    <p style={{ color: '#94A3B8', fontSize: '0.88rem' }}>No recently registered users found.</p>
+                    <p style={{ color: '#526B85', fontSize: '0.88rem' }}>No recently registered users found.</p>
                   )}
                 </div>
 
@@ -557,8 +557,8 @@ export default function AdminDashboard() {
                           {summary.recentJobs.map((j) => (
                             <tr key={j._id}>
                               <td>
-                                <strong style={{ color: '#F8FAFC' }}>{j.title}</strong>
-                                <div style={{ fontSize: '0.78rem', color: '#94A3B8' }}>{j.company}</div>
+                                <strong style={{ color: '#17365D' }}>{j.title}</strong>
+                                <div style={{ fontSize: '0.78rem', color: '#526B85' }}>{j.company}</div>
                               </td>
                               <td>{j.town}</td>
                               <td>
@@ -580,7 +580,7 @@ export default function AdminDashboard() {
                       </table>
                     </div>
                   ) : (
-                    <p style={{ color: '#94A3B8', fontSize: '0.88rem' }}>No job listings created recently.</p>
+                    <p style={{ color: '#526B85', fontSize: '0.88rem' }}>No job listings created recently.</p>
                   )}
                 </div>
               </div>
@@ -663,10 +663,10 @@ export default function AdminDashboard() {
                     return (
                       <tr key={u._id} id={`user-row-${u._id}`}>
                         <td>
-                          <div style={{ fontWeight: 700, color: '#F8FAFC' }}>{u.name}</div>
-                          <div style={{ fontSize: '0.78rem', color: '#94A3B8' }}>{u.email}</div>
+                          <div style={{ fontWeight: 700, color: '#17365D' }}>{u.name}</div>
+                          <div style={{ fontSize: '0.78rem', color: '#526B85' }}>{u.email}</div>
                           {u.recruiterProfile?.companyName && (
-                            <div style={{ fontSize: '0.75rem', color: '#A78BFA' }}>
+                            <div style={{ fontSize: '0.75rem', color: '#0F766E' }}>
                               🏢 {u.recruiterProfile.companyName}
                             </div>
                           )}
@@ -677,12 +677,12 @@ export default function AdminDashboard() {
                             style={{
                               background:
                                 u.role === 'admin'
-                                  ? 'rgba(245, 158, 11, 0.15)'
+                                  ? '#FEF3C7'
                                   : u.role === 'recruiter'
-                                  ? 'rgba(124, 58, 237, 0.15)'
-                                  : 'rgba(16, 185, 129, 0.15)',
+                                  ? '#F3EFFF'
+                                  : '#E9F9F8',
                               color:
-                                u.role === 'admin' ? '#FCD34D' : u.role === 'recruiter' ? '#A78BFA' : '#34D399',
+                                u.role === 'admin' ? '#B45309' : u.role === 'recruiter' ? '#6D28D9' : '#047857',
                             }}
                           >
                             {u.role}
@@ -692,7 +692,7 @@ export default function AdminDashboard() {
                           {u.isVerified ? (
                             <span className={`${styles.badge} ${styles.badgeApproved}`}>✓ Verified</span>
                           ) : (
-                            <span className={`${styles.badge}`} style={{ background: 'rgba(255,255,255,0.05)' }}>
+                            <span className={styles.badge} style={{ background: '#F1F5F9', color: '#526B85', border: '1px solid #E1EDF3' }}>
                               Unverified
                             </span>
                           )}
@@ -713,7 +713,7 @@ export default function AdminDashboard() {
                         </td>
                         <td>
                           {isCurrentUser ? (
-                            <span style={{ fontSize: '0.78rem', color: '#64748B', fontStyle: 'italic' }}>
+                            <span style={{ fontSize: '0.78rem', color: '#526B85', fontStyle: 'italic' }}>
                               Self (Protected)
                             </span>
                           ) : (
@@ -817,19 +817,19 @@ export default function AdminDashboard() {
                     return (
                       <tr key={emp._id} id={`employer-row-${emp._id}`}>
                         <td>
-                          <div style={{ fontWeight: 700, color: '#F8FAFC' }}>
+                          <div style={{ fontWeight: 700, color: '#17365D' }}>
                             {comp.companyName || emp.name}
                           </div>
-                          <div style={{ fontSize: '0.78rem', color: '#94A3B8' }}>{emp.email}</div>
+                          <div style={{ fontSize: '0.78rem', color: '#526B85' }}>{emp.email}</div>
                           {comp.phone && (
-                            <div style={{ fontSize: '0.75rem', color: '#64748B' }}>📞 {comp.phone}</div>
+                            <div style={{ fontSize: '0.75rem', color: '#526B85' }}>📞 {comp.phone}</div>
                           )}
                           {comp.companyWebsite && (
                             <a
                               href={comp.companyWebsite}
                               target="_blank"
                               rel="noreferrer"
-                              style={{ fontSize: '0.75rem', display: 'block', marginTop: 2 }}
+                              style={{ fontSize: '0.75rem', display: 'block', marginTop: 2, color: '#0F9D96' }}
                             >
                               🌐 {comp.companyWebsite}
                             </a>
@@ -848,12 +848,12 @@ export default function AdminDashboard() {
                         </td>
                         <td style={{ fontSize: '0.8rem', maxWidth: 220 }}>
                           {req.reason ? (
-                            <span style={{ color: '#CBD5E1' }}>"{req.reason}"</span>
+                            <span style={{ color: '#17365D' }}>"{req.reason}"</span>
                           ) : (
-                            <span style={{ color: '#64748B' }}>No review note recorded</span>
+                            <span style={{ color: '#526B85' }}>No review note recorded</span>
                           )}
                           {req.reviewedAt && (
-                            <div style={{ fontSize: '0.72rem', color: '#94A3B8', marginTop: 2 }}>
+                            <div style={{ fontSize: '0.72rem', color: '#526B85', marginTop: 2 }}>
                               Reviewed: {new Date(req.reviewedAt).toLocaleDateString()}
                             </div>
                           )}
@@ -988,15 +988,15 @@ export default function AdminDashboard() {
                   {jobs.map((j) => (
                     <tr key={j._id} id={`job-row-${j._id}`}>
                       <td>
-                        <div style={{ fontWeight: 700, color: '#F8FAFC' }}>{j.title}</div>
-                        <div style={{ fontSize: '0.78rem', color: '#A78BFA' }}>{j.company}</div>
-                        <div style={{ fontSize: '0.74rem', color: '#64748B' }}>
+                        <div style={{ fontWeight: 700, color: '#17365D' }}>{j.title}</div>
+                        <div style={{ fontSize: '0.78rem', color: '#0F766E' }}>{j.company}</div>
+                        <div style={{ fontSize: '0.74rem', color: '#526B85' }}>
                           Posted: {new Date(j.createdAt || Date.now()).toLocaleDateString()}
                         </div>
                       </td>
                       <td>{j.town}</td>
                       <td>
-                        <span className={styles.badge} style={{ background: 'rgba(255,255,255,0.06)' }}>
+                        <span className={styles.badge} style={{ background: '#F1F5F9', color: '#17365D', border: '1px solid #E1EDF3' }}>
                           {j.category}
                         </span>
                       </td>
@@ -1026,9 +1026,9 @@ export default function AdminDashboard() {
                       </td>
                       <td style={{ fontSize: '0.8rem', maxWidth: 160 }}>
                         {j.moderationNotes ? (
-                          <span style={{ color: '#CBD5E1' }}>"{j.moderationNotes}"</span>
+                          <span style={{ color: '#17365D' }}>"{j.moderationNotes}"</span>
                         ) : (
-                          <span style={{ color: '#64748B' }}>None</span>
+                          <span style={{ color: '#526B85' }}>None</span>
                         )}
                       </td>
                       <td>
@@ -1130,7 +1130,7 @@ export default function AdminDashboard() {
                 <tbody>
                   {auditLogs.map((log) => (
                     <tr key={log._id}>
-                      <td style={{ fontSize: '0.78rem', color: '#94A3B8' }}>
+                      <td style={{ fontSize: '0.78rem', color: '#526B85' }}>
                         {new Date(log.createdAt).toLocaleString()}
                       </td>
                       <td>
@@ -1139,30 +1139,30 @@ export default function AdminDashboard() {
                           style={{
                             background:
                               log.action.includes('APPROVED') || log.action.includes('VERIFIED') || log.action.includes('REACTIVATED')
-                                ? 'rgba(16, 185, 129, 0.15)'
+                                ? '#E9F9F8'
                                 : log.action.includes('FLAGGED')
-                                ? 'rgba(168, 85, 247, 0.15)'
-                                : 'rgba(239, 68, 68, 0.15)',
+                                ? '#F3EFFF'
+                                : '#FEE2E2',
                             color:
                               log.action.includes('APPROVED') || log.action.includes('VERIFIED') || log.action.includes('REACTIVATED')
-                                ? '#34D399'
+                                ? '#047857'
                                 : log.action.includes('FLAGGED')
-                                ? '#C084FC'
-                                : '#F87171',
+                                ? '#7C3AED'
+                                : '#DC2626',
                           }}
                         >
                           {log.action}
                         </span>
                       </td>
                       <td>
-                        <strong style={{ color: '#F8FAFC' }}>{log.targetName || log.targetId}</strong>
-                        <div style={{ fontSize: '0.72rem', color: '#64748B' }}>{log.targetType}</div>
+                        <strong style={{ color: '#17365D' }}>{log.targetName || log.targetId}</strong>
+                        <div style={{ fontSize: '0.72rem', color: '#526B85' }}>{log.targetType}</div>
                       </td>
                       <td>
-                        <div style={{ color: '#F8FAFC' }}>{log.performedByName || 'Administrator'}</div>
-                        <div style={{ fontSize: '0.72rem', color: '#94A3B8' }}>{log.performedByEmail}</div>
+                        <div style={{ color: '#17365D' }}>{log.performedByName || 'Administrator'}</div>
+                        <div style={{ fontSize: '0.72rem', color: '#526B85' }}>{log.performedByEmail}</div>
                       </td>
-                      <td style={{ fontSize: '0.8rem', color: '#CBD5E1' }}>
+                      <td style={{ fontSize: '0.8rem', color: '#17365D' }}>
                         {log.details ? (
                           <div>
                             {log.details.reason && <div>Reason: "{log.details.reason}"</div>}
@@ -1170,7 +1170,7 @@ export default function AdminDashboard() {
                             {log.details.newStatus && <div>New Status: {log.details.newStatus}</div>}
                           </div>
                         ) : (
-                          <span style={{ color: '#64748B' }}>None</span>
+                          <span style={{ color: '#526B85' }}>None</span>
                         )}
                       </td>
                     </tr>
@@ -1212,13 +1212,13 @@ export default function AdminDashboard() {
         <div className={styles.modalOverlay} role="dialog" aria-modal="true" aria-labelledby="modal-title">
           <div className={styles.modalCard}>
             <h3 className={styles.modalTitle} id="modal-title">{modalConfig.title}</h3>
-            <p style={{ fontSize: '0.88rem', color: '#94A3B8', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '0.88rem', color: '#526B85', lineHeight: 1.5 }}>
               {modalConfig.message}
             </p>
 
             {modalConfig.requireReason && (
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', color: '#CBD5E1', marginBottom: '0.35rem' }}>
+                <label style={{ display: 'block', fontSize: '0.78rem', color: '#17365D', fontWeight: 600, marginBottom: '0.35rem' }}>
                   Administrative Reason / Justification:
                 </label>
                 <textarea

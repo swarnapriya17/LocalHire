@@ -1131,9 +1131,9 @@ export default function JobSeekerProfilePage() {
                       type="button"
                       onClick={() => handlePreferenceToggle('preferredLocations', town)}
                       style={{
-                        background: isSelected ? 'rgba(124, 58, 237, 0.3)' : 'rgba(255, 255, 255, 0.05)',
-                        border: isSelected ? '1px solid #A78BFA' : '1px solid rgba(255, 255, 255, 0.1)',
-                        color: isSelected ? '#F8FAFC' : '#94A3B8',
+                        background: isSelected ? '#E9F9F8' : '#FFFFFF',
+                        border: isSelected ? '1px solid #0F9D96' : '1px solid #E1EDF3',
+                        color: isSelected ? '#0F766E' : '#526B85',
                         padding: '0.4rem 0.85rem',
                         borderRadius: 999,
                         fontSize: '0.85rem',
@@ -1159,9 +1159,9 @@ export default function JobSeekerProfilePage() {
                       type="button"
                       onClick={() => handlePreferenceToggle('categories', cat.id)}
                       style={{
-                        background: isSelected ? 'rgba(124, 58, 237, 0.3)' : 'rgba(255, 255, 255, 0.05)',
-                        border: isSelected ? '1px solid #A78BFA' : '1px solid rgba(255, 255, 255, 0.1)',
-                        color: isSelected ? '#F8FAFC' : '#94A3B8',
+                        background: isSelected ? '#F3EFFF' : '#FFFFFF',
+                        border: isSelected ? '1px solid #8B5CF6' : '1px solid #E1EDF3',
+                        color: isSelected ? '#6D28D9' : '#526B85',
                         padding: '0.4rem 0.85rem',
                         borderRadius: 999,
                         fontSize: '0.85rem',

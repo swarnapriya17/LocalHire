@@ -64,7 +64,7 @@ export default function Navbar({ savedCount = 0, onOpenSavedJobs }) {
           </div>
           <div className={styles.logoText}>
             <span className={styles.brandName}>LocalHire</span>
-            <span className={styles.brandSub}>West Godavari</span>
+            <span className={styles.brandSub}>WEST GODAVARI</span>
           </div>
         </Link>
 

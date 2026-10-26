@@ -40,6 +40,36 @@ const WEST_GODAVARI_TOWNS = [
   'Jangareddygudem',
 ];
 
+const lightInputStyle = {
+  width: '100%',
+  background: '#FFFFFF',
+  border: '1px solid #E1EDF3',
+  borderRadius: 8,
+  padding: '0.65rem 0.85rem',
+  color: '#17365D',
+  fontSize: '0.9rem',
+  outline: 'none',
+};
+
+const lightInputSmStyle = {
+  width: '100%',
+  background: '#FFFFFF',
+  border: '1px solid #E1EDF3',
+  borderRadius: 6,
+  padding: '0.55rem',
+  color: '#17365D',
+  fontSize: '0.85rem',
+  outline: 'none',
+};
+
+const lightLabelStyle = {
+  display: 'block',
+  fontSize: '0.85rem',
+  fontWeight: 600,
+  color: '#17365D',
+  marginBottom: '0.35rem',
+};
+
 export default function RecruiterDashboard() {
   const { user, logout } = useAuth();
   const { t } = useLanguage();
@@ -453,19 +483,19 @@ export default function RecruiterDashboard() {
   const getStatusBadgeStyle = (status) => {
     switch (status) {
       case 'Applied':
-        return { background: 'rgba(59, 130, 246, 0.15)', border: '1px solid rgba(59, 130, 246, 0.35)', color: '#60A5FA' };
+        return { background: '#EFF6FF', border: '1px solid #BFDBFE', color: '#1D4ED8' };
       case 'Under Review':
-        return { background: 'rgba(245, 158, 11, 0.15)', border: '1px solid rgba(245, 158, 11, 0.35)', color: '#FBBF24' };
+        return { background: '#FEF3C7', border: '1px solid #FDE68A', color: '#B45309' };
       case 'Shortlisted':
-        return { background: 'rgba(6, 182, 212, 0.15)', border: '1px solid rgba(6, 182, 212, 0.35)', color: '#22D3EE' };
+        return { background: '#E9F9F8', border: '1px solid #99F6E4', color: '#0F766E' };
       case 'Interview Scheduled':
-        return { background: 'rgba(139, 92, 246, 0.22)', border: '1px solid rgba(167, 139, 250, 0.5)', color: '#C4B5FD', boxShadow: '0 0 10px rgba(124, 58, 237, 0.25)' };
+        return { background: '#F3EFFF', border: '1px solid #DDD6FE', color: '#6D28D9' };
       case 'Hired':
-        return { background: 'rgba(16, 185, 129, 0.18)', border: '1px solid rgba(16, 185, 129, 0.4)', color: '#34D399' };
+        return { background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#047857' };
       case 'Rejected':
-        return { background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#F87171' };
+        return { background: '#FEF2F2', border: '1px solid #FECACA', color: '#DC2626' };
       default:
-        return { background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)', color: '#E2E8F0' };
+        return { background: '#F1F5F9', border: '1px solid #E1EDF3', color: '#526B85' };
     }
   };
 
@@ -675,7 +705,7 @@ export default function RecruiterDashboard() {
 
                   {/* Status Breakdown Pills */}
                   <div>
-                    <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#F8FAFC', marginBottom: '0.65rem' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#17365D', marginBottom: '0.65rem' }}>
                       Active Stage Breakdown
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '0.6rem' }}>
@@ -705,7 +735,7 @@ export default function RecruiterDashboard() {
                   {/* Per-job applications summary */}
                   {analyticsData?.jobsAnalytics && analyticsData.jobsAnalytics.length > 0 && (
                     <div>
-                      <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#F8FAFC', marginBottom: '0.5rem' }}>
+                      <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#17365D', marginBottom: '0.5rem' }}>
                         Applications by Vacancy
                       </div>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
@@ -713,8 +743,8 @@ export default function RecruiterDashboard() {
                           <div
                             key={j.jobId}
                             style={{
-                              background: 'rgba(11, 16, 32, 0.5)',
-                              border: '1px solid rgba(255, 255, 255, 0.05)',
+                              background: '#F8FAFC',
+                              border: '1px solid #E1EDF3',
                               borderRadius: 6,
                               padding: '0.65rem 0.85rem',
                               display: 'flex',
@@ -724,12 +754,12 @@ export default function RecruiterDashboard() {
                             }}
                           >
                             <div>
-                              <span style={{ color: '#F8FAFC', fontWeight: 600 }}>{j.title}</span>
-                              <span style={{ color: '#94A3B8', fontSize: '0.78rem', marginLeft: '0.5rem' }}>📍 {j.town}</span>
+                              <span style={{ color: '#17365D', fontWeight: 600 }}>{j.title}</span>
+                              <span style={{ color: '#526B85', fontSize: '0.78rem', marginLeft: '0.5rem' }}>📍 {j.town}</span>
                             </div>
                             <div style={{ display: 'flex', gap: '0.75rem', fontSize: '0.8rem' }}>
-                              <span style={{ color: '#60A5FA' }}>👥 {j.applicantCount} applicants</span>
-                              <span style={{ color: '#C4B5FD' }}>🗓️ {j.interviewCount} interviews</span>
+                              <span style={{ color: '#0F766E' }}>👥 {j.applicantCount} applicants</span>
+                              <span style={{ color: '#6D28D9' }}>🗓️ {j.interviewCount} interviews</span>
                             </div>
                           </div>
                         ))}
@@ -749,18 +779,18 @@ export default function RecruiterDashboard() {
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                <div style={{ background: 'rgba(11, 16, 32, 0.6)', padding: '1rem', borderRadius: 8, border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                  <div style={{ fontWeight: 700, color: '#F8FAFC', fontSize: '0.9rem', marginBottom: '0.25rem' }}>
+                <div style={{ background: '#F8FAFC', padding: '1rem', borderRadius: 8, border: '1px solid #E1EDF3' }}>
+                  <div style={{ fontWeight: 700, color: '#17365D', fontSize: '0.9rem', marginBottom: '0.25rem' }}>
                     🏢 Employer: {companyForm.companyName || 'Not Set'}
                   </div>
-                  <p style={{ fontSize: '0.82rem', color: '#94A3B8', lineHeight: 1.45 }}>
+                  <p style={{ fontSize: '0.82rem', color: '#526B85', lineHeight: 1.45 }}>
                     Location: 📍 {companyForm.town || 'Bhimavaram'}, {companyForm.location || 'West Godavari'}<br />
                     Industry: {companyForm.industry || 'IT & Tech'}
                   </p>
                   <button
                     type="button"
                     onClick={() => setActiveTab('company')}
-                    style={{ background: 'none', border: 'none', color: '#A78BFA', fontSize: '0.8rem', cursor: 'pointer', padding: 0, marginTop: '0.35rem', fontWeight: 600 }}
+                    style={{ background: 'none', border: 'none', color: '#0F9D96', fontSize: '0.8rem', cursor: 'pointer', padding: 0, marginTop: '0.35rem', fontWeight: 600 }}
                   >
                     Edit Employer Profile →
                   </button>
@@ -853,8 +883,8 @@ export default function RecruiterDashboard() {
                   <div 
                     key={jobId} 
                     style={{ 
-                      background: 'rgba(11, 16, 32, 0.65)', 
-                      border: '1px solid rgba(255, 255, 255, 0.06)', 
+                      background: '#FFFFFF', 
+                      border: '1px solid #E1EDF3', 
                       borderRadius: 10, 
                       padding: '1.25rem', 
                       display: 'flex', 
@@ -862,11 +892,12 @@ export default function RecruiterDashboard() {
                       alignItems: 'center', 
                       flexWrap: 'wrap', 
                       gap: '1rem',
+                      boxShadow: '0 2px 8px rgba(23, 54, 93, 0.04)',
                     }}
                   >
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                        <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#F8FAFC' }}>
+                        <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#17365D' }}>
                           {job.title}
                         </h3>
                         <span
@@ -875,18 +906,18 @@ export default function RecruiterDashboard() {
                             fontWeight: 700,
                             padding: '0.15rem 0.55rem',
                             borderRadius: 9999,
-                            background: isClosed ? 'rgba(239, 68, 68, 0.15)' : 'rgba(16, 185, 129, 0.15)',
-                            color: isClosed ? '#F87171' : '#34D399',
-                            border: isClosed ? '1px solid rgba(239, 68, 68, 0.3)' : '1px solid rgba(16, 185, 129, 0.3)',
+                            background: isClosed ? '#FEF2F2' : '#ECFDF5',
+                            color: isClosed ? '#DC2626' : '#047857',
+                            border: isClosed ? '1px solid #FECACA' : '1px solid #A7F3D0',
                           }}
                         >
                           ● {isClosed ? 'Closed' : 'Active'}
                         </span>
                       </div>
-                      <div style={{ fontSize: '0.85rem', color: '#A78BFA' }}>
+                      <div style={{ fontSize: '0.85rem', color: '#0F766E' }}>
                         🏢 {job.company} • 📍 {job.town}, AP • 💼 {job.employmentType} • 💰 {job.salary || 'Salary Disclosed Upon Request'}
                       </div>
-                      <div style={{ fontSize: '0.8rem', color: '#94A3B8', marginTop: '0.35rem', maxWidth: '650px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      <div style={{ fontSize: '0.8rem', color: '#526B85', marginTop: '0.35rem', maxWidth: '650px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                         {job.description}
                       </div>
                     </div>
@@ -896,9 +927,9 @@ export default function RecruiterDashboard() {
                         type="button"
                         onClick={() => handleViewApplicants(job)}
                         style={{
-                          background: 'rgba(124, 58, 237, 0.25)',
-                          border: '1px solid rgba(167, 139, 250, 0.4)',
-                          color: '#FFFFFF',
+                          background: '#F3EFFF',
+                          border: '1px solid #DDD6FE',
+                          color: '#6D28D9',
                           padding: '0.4rem 0.85rem',
                           borderRadius: 6,
                           fontSize: '0.82rem',
@@ -913,9 +944,9 @@ export default function RecruiterDashboard() {
                         type="button"
                         onClick={() => setEditingJob({ ...job })}
                         style={{
-                          background: 'rgba(255, 255, 255, 0.06)',
-                          border: '1px solid rgba(255, 255, 255, 0.15)',
-                          color: '#CBD5E1',
+                          background: '#F1F5F9',
+                          border: '1px solid #E1EDF3',
+                          color: '#17365D',
                           padding: '0.4rem 0.75rem',
                           borderRadius: 6,
                           fontSize: '0.82rem',
@@ -930,9 +961,9 @@ export default function RecruiterDashboard() {
                         type="button"
                         onClick={() => handleToggleJobStatus(job)}
                         style={{
-                          background: isClosed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(245, 158, 11, 0.15)',
-                          border: isClosed ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(245, 158, 11, 0.3)',
-                          color: isClosed ? '#34D399' : '#FCD34D',
+                          background: isClosed ? '#ECFDF5' : '#FEF3C7',
+                          border: isClosed ? '1px solid #A7F3D0' : '1px solid #FDE68A',
+                          color: isClosed ? '#047857' : '#B45309',
                           padding: '0.4rem 0.75rem',
                           borderRadius: 6,
                           fontSize: '0.82rem',
@@ -947,9 +978,9 @@ export default function RecruiterDashboard() {
                         type="button"
                         onClick={() => handleDeleteJob(jobId, job.title)}
                         style={{
-                          background: 'rgba(239, 68, 68, 0.12)',
-                          border: '1px solid rgba(239, 68, 68, 0.3)',
-                          color: '#EF4444',
+                          background: '#FEF2F2',
+                          border: '1px solid #FECACA',
+                          color: '#DC2626',
                           padding: '0.4rem 0.75rem',
                           borderRadius: 6,
                           fontSize: '0.82rem',
@@ -966,10 +997,10 @@ export default function RecruiterDashboard() {
               })}
             </div>
           ) : (
-            <div style={{ textAlign: 'center', padding: '3rem 1rem', background: 'rgba(11, 16, 32, 0.4)', borderRadius: 12 }}>
+            <div style={{ textAlign: 'center', padding: '3rem 1rem', background: '#F8FAFC', border: '1px solid #E1EDF3', borderRadius: 12 }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>📭</div>
-              <h3 style={{ color: '#F8FAFC', fontSize: '1.1rem', marginBottom: '0.35rem' }}>No Listings Found</h3>
-              <p style={{ color: '#94A3B8', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
+              <h3 style={{ color: '#17365D', fontSize: '1.1rem', marginBottom: '0.35rem' }}>No Listings Found</h3>
+              <p style={{ color: '#526B85', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
                 You do not have any job postings matching this filter.
               </p>
               <button
@@ -1017,7 +1048,7 @@ export default function RecruiterDashboard() {
 
           {!selectedJob ? (
             <div style={{ padding: '2rem 1rem', textAlign: 'center' }}>
-              <p style={{ color: '#94A3B8', fontSize: '0.9rem', marginBottom: '1.25rem' }}>
+              <p style={{ color: '#526B85', fontSize: '0.9rem', marginBottom: '1.25rem' }}>
                 Select a job opening below to review candidates who applied:
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem', justifyContent: 'center' }}>
@@ -1027,9 +1058,9 @@ export default function RecruiterDashboard() {
                     type="button"
                     onClick={() => handleViewApplicants(j)}
                     style={{
-                      background: 'rgba(124, 58, 237, 0.15)',
-                      border: '1px solid rgba(167, 139, 250, 0.35)',
-                      color: '#F8FAFC',
+                      background: '#F3EFFF',
+                      border: '1px solid #DDD6FE',
+                      color: '#6D28D9',
                       padding: '0.6rem 1rem',
                       borderRadius: 8,
                       fontSize: '0.88rem',
@@ -1043,7 +1074,7 @@ export default function RecruiterDashboard() {
               </div>
             </div>
           ) : isLoadingApps ? (
-            <div style={{ textAlign: 'center', padding: '3rem', color: '#94A3B8' }}>
+            <div style={{ textAlign: 'center', padding: '3rem', color: '#526B85' }}>
               Loading candidate applications...
             </div>
           ) : jobApplications.length > 0 ? (
@@ -1057,29 +1088,30 @@ export default function RecruiterDashboard() {
                   <div
                     key={appId}
                     style={{
-                      background: 'rgba(15, 23, 42, 0.85)',
-                      border: '1px solid rgba(255, 255, 255, 0.08)',
+                      background: '#FFFFFF',
+                      border: '1px solid #E1EDF3',
                       borderRadius: 10,
                       padding: '1.25rem',
                       display: 'flex',
                       flexDirection: 'column',
                       gap: '0.65rem',
+                      boxShadow: '0 2px 8px rgba(23, 54, 93, 0.04)',
                     }}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem' }}>
                       <div>
-                        <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#F8FAFC' }}>
+                        <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#17365D' }}>
                           {candidate.name || 'Candidate'}
                           {candidateProfile.isFresher && (
-                            <span style={{ fontSize: '0.72rem', background: 'rgba(16, 185, 129, 0.2)', color: '#34D399', padding: '0.15rem 0.5rem', borderRadius: 999, marginLeft: '0.5rem' }}>
+                            <span style={{ fontSize: '0.72rem', background: '#E9F9F8', color: '#0F766E', border: '1px solid #99F6E4', padding: '0.15rem 0.5rem', borderRadius: 999, marginLeft: '0.5rem' }}>
                               🎓 Fresher Friendly
                             </span>
                           )}
                         </div>
-                        <div style={{ fontSize: '0.85rem', color: '#A78BFA' }}>
+                        <div style={{ fontSize: '0.85rem', color: '#0F766E' }}>
                           {candidateProfile.headline || 'Job Seeker'} • 📍 {candidateProfile.location || 'West Godavari'}
                         </div>
-                        <div style={{ fontSize: '0.8rem', color: '#94A3B8' }}>
+                        <div style={{ fontSize: '0.8rem', color: '#526B85' }}>
                           ✉️ {candidate.email} {candidateProfile.phone && `• 📞 ${candidateProfile.phone}`}
                         </div>
                       </div>
@@ -1100,7 +1132,7 @@ export default function RecruiterDashboard() {
                           type="button"
                           onClick={() => handleOpenStatusModal(app)}
                           style={{
-                            background: 'linear-gradient(135deg, #7C3AED, #6D28D9)',
+                            background: 'linear-gradient(135deg, #0F9D96, #0F766E)',
                             border: 'none',
                             color: '#FFF',
                             padding: '0.4rem 0.85rem',
@@ -1119,7 +1151,7 @@ export default function RecruiterDashboard() {
                     {candidateProfile.skills && candidateProfile.skills.length > 0 && (
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
                         {candidateProfile.skills.slice(0, 6).map((sk, idx) => (
-                          <span key={idx} style={{ fontSize: '0.72rem', background: 'rgba(255, 255, 255, 0.06)', color: '#CBD5E1', padding: '0.15rem 0.45rem', borderRadius: 4 }}>
+                          <span key={idx} style={{ fontSize: '0.72rem', background: '#F1F5F9', color: '#17365D', border: '1px solid #E1EDF3', padding: '0.15rem 0.45rem', borderRadius: 4 }}>
                             {sk}
                           </span>
                         ))}
@@ -1128,26 +1160,26 @@ export default function RecruiterDashboard() {
 
                     {/* Cover Letter preview */}
                     {app.coverLetter && (
-                      <div style={{ fontSize: '0.82rem', color: '#CBD5E1', background: 'rgba(255, 255, 255, 0.03)', padding: '0.65rem 0.85rem', borderRadius: 6 }}>
+                      <div style={{ fontSize: '0.82rem', color: '#17365D', background: '#F8FAFC', border: '1px solid #E1EDF3', padding: '0.65rem 0.85rem', borderRadius: 6 }}>
                         <strong>Candidate Note:</strong> "{app.coverLetter}"
                       </div>
                     )}
 
                     {/* Interview scheduled info */}
                     {app.status === 'Interview Scheduled' && app.interviewDetails && (
-                      <div style={{ fontSize: '0.82rem', color: '#C4B5FD', background: 'rgba(124, 58, 237, 0.16)', border: '1px solid rgba(167, 139, 250, 0.35)', padding: '0.65rem 0.85rem', borderRadius: 6 }}>
+                      <div style={{ fontSize: '0.82rem', color: '#6D28D9', background: '#F3EFFF', border: '1px solid #DDD6FE', padding: '0.65rem 0.85rem', borderRadius: 6 }}>
                         📅 Scheduled Session: <strong>{app.interviewDetails.interviewDate} {app.interviewDetails.interviewTime}</strong>
                         {app.interviewDetails.meetingLink && (
-                          <span> • <a href={app.interviewDetails.meetingLink} target="_blank" rel="noopener noreferrer" style={{ color: '#DDD6FE', textDecoration: 'underline' }}>Meeting Link ↗</a></span>
+                          <span> • <a href={app.interviewDetails.meetingLink} target="_blank" rel="noopener noreferrer" style={{ color: '#0F9D96', textDecoration: 'underline' }}>Meeting Link ↗</a></span>
                         )}
                         {app.interviewDetails.location && <span> • 📍 Venue: {app.interviewDetails.location}</span>}
                       </div>
                     )}
 
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.35rem', borderTop: '1px solid rgba(255, 255, 255, 0.04)', fontSize: '0.75rem', color: '#64748B' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.35rem', borderTop: '1px solid #E1EDF3', fontSize: '0.75rem', color: '#526B85' }}>
                       <span>Submitted: {new Date(app.createdAt || app.submissionTimestamp || Date.now()).toLocaleDateString()}</span>
                       {app.resumeUrl && (
-                        <a href={app.resumeUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#818CF8' }}>
+                        <a href={app.resumeUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#0F9D96' }}>
                           View Candidate Resume Link ↗
                         </a>
                       )}
@@ -1157,7 +1189,7 @@ export default function RecruiterDashboard() {
               })}
             </div>
           ) : (
-            <div style={{ textAlign: 'center', padding: '2.5rem', color: '#94A3B8' }}>
+            <div style={{ textAlign: 'center', padding: '2.5rem', color: '#526B85' }}>
               No applications received for this job opening yet.
             </div>
           )}
@@ -1175,7 +1207,7 @@ export default function RecruiterDashboard() {
             </h2>
             <button
               type="button"
-              style={{ background: 'none', border: 'none', color: '#A78BFA', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 600 }}
+              style={{ background: 'none', border: 'none', color: '#0F9D96', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 600 }}
               onClick={fetchInterviews}
             >
               Refresh Sessions ⟳
@@ -1183,7 +1215,7 @@ export default function RecruiterDashboard() {
           </div>
 
           {isLoadingInterviews ? (
-            <div style={{ textAlign: 'center', padding: '3rem', color: '#94A3B8' }}>
+            <div style={{ textAlign: 'center', padding: '3rem', color: '#526B85' }}>
               Loading scheduled interview sessions...
             </div>
           ) : scheduledInterviews.length > 0 ? (
@@ -1198,43 +1230,44 @@ export default function RecruiterDashboard() {
                   <div
                     key={appId}
                     style={{
-                      background: 'rgba(124, 58, 237, 0.1)',
-                      border: '1px solid rgba(167, 139, 250, 0.35)',
+                      background: '#FFFFFF',
+                      border: '1px solid #E1EDF3',
                       borderRadius: 10,
                       padding: '1.25rem',
                       display: 'flex',
                       flexDirection: 'column',
                       gap: '0.75rem',
+                      boxShadow: '0 2px 8px rgba(23, 54, 93, 0.04)',
                     }}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.75rem' }}>
                       <div>
-                        <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#F8FAFC' }}>
+                        <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#17365D' }}>
                           Candidate: {candidate.name || 'Candidate'}
                         </div>
-                        <div style={{ fontSize: '0.85rem', color: '#C4B5FD' }}>
+                        <div style={{ fontSize: '0.85rem', color: '#0F766E' }}>
                           Position: <strong>{job.title || 'Role'}</strong> • 🏢 {job.company || 'Employer'} (📍 {job.town}, AP)
                         </div>
-                        <div style={{ fontSize: '0.8rem', color: '#94A3B8' }}>
+                        <div style={{ fontSize: '0.8rem', color: '#526B85' }}>
                           ✉️ {candidate.email} {candidate.phone && `• 📞 ${candidate.phone}`}
                         </div>
                       </div>
 
-                      <div style={{ background: 'rgba(124, 58, 237, 0.25)', border: '1px solid rgba(167, 139, 250, 0.4)', borderRadius: 8, padding: '0.5rem 0.85rem', textAlign: 'right' }}>
-                        <div style={{ fontSize: '0.92rem', fontWeight: 800, color: '#FFFFFF' }}>
+                      <div style={{ background: '#F3EFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '0.5rem 0.85rem', textAlign: 'right' }}>
+                        <div style={{ fontSize: '0.92rem', fontWeight: 800, color: '#6D28D9' }}>
                           📅 {int.interviewDate || 'Date Disclosed Soon'}
                         </div>
-                        <div style={{ fontSize: '0.8rem', color: '#DDD6FE' }}>
+                        <div style={{ fontSize: '0.8rem', color: '#526B85' }}>
                           ⏰ {int.interviewTime || 'Time TBA'}
                         </div>
                       </div>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.82rem', color: '#CBD5E1', background: 'rgba(11, 16, 32, 0.5)', padding: '0.75rem', borderRadius: 8 }}>
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.82rem', color: '#17365D', background: '#F8FAFC', border: '1px solid #E1EDF3', padding: '0.75rem', borderRadius: 8 }}>
                       {int.meetingLink && (
                         <div>
                           🔗 <strong>Meeting URL:</strong>{' '}
-                          <a href={int.meetingLink} target="_blank" rel="noopener noreferrer" style={{ color: '#A78BFA', textDecoration: 'underline' }}>
+                          <a href={int.meetingLink} target="_blank" rel="noopener noreferrer" style={{ color: '#0F9D96', textDecoration: 'underline' }}>
                             Join Call Link ↗
                           </a>
                         </div>
@@ -1256,9 +1289,9 @@ export default function RecruiterDashboard() {
                         type="button"
                         onClick={() => handleOpenStatusModal({ ...intApp, applicant: candidate, job })}
                         style={{
-                          background: 'rgba(255, 255, 255, 0.06)',
-                          border: '1px solid rgba(255, 255, 255, 0.15)',
-                          color: '#FFFFFF',
+                          background: '#F1F5F9',
+                          border: '1px solid #E1EDF3',
+                          color: '#17365D',
                           padding: '0.35rem 0.75rem',
                           borderRadius: 6,
                           fontSize: '0.8rem',
@@ -1274,10 +1307,10 @@ export default function RecruiterDashboard() {
               })}
             </div>
           ) : (
-            <div style={{ textAlign: 'center', padding: '3rem 1rem', background: 'rgba(11, 16, 32, 0.4)', borderRadius: 12 }}>
+            <div style={{ textAlign: 'center', padding: '3rem 1rem', background: '#F8FAFC', border: '1px solid #E1EDF3', borderRadius: 12 }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>🗓️</div>
-              <h3 style={{ color: '#F8FAFC', fontSize: '1.1rem', marginBottom: '0.35rem' }}>No Interviews Scheduled Yet</h3>
-              <p style={{ color: '#94A3B8', fontSize: '0.85rem' }}>
+              <h3 style={{ color: '#17365D', fontSize: '1.1rem', marginBottom: '0.35rem' }}>No Interviews Scheduled Yet</h3>
+              <p style={{ color: '#526B85', fontSize: '0.85rem' }}>
                 When you review candidate submissions and schedule an interview in the Applicant Pipeline, sessions will appear here.
               </p>
             </div>
@@ -1297,29 +1330,29 @@ export default function RecruiterDashboard() {
             <div style={{ fontSize: '0.85rem' }}>
               Verification Status:{' '}
               {isEmployerVerified ? (
-                <span style={{ color: '#34D399', fontWeight: 700 }}>✓ Verified Regional Employer</span>
+                <span style={{ color: '#047857', fontWeight: 700 }}>✓ Verified Regional Employer</span>
               ) : (
-                <span style={{ color: '#FCD34D', fontWeight: 600 }}>⏱️ Pending Admin Verification</span>
+                <span style={{ color: '#B45309', fontWeight: 600 }}>⏱️ Pending Admin Verification</span>
               )}
             </div>
           </div>
 
           <form onSubmit={handleCompanyProfileSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginTop: '0.5rem' }}>
             {companyError && (
-              <div style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', borderRadius: 8, padding: '0.85rem', color: '#FCA5A5', fontSize: '0.88rem' }}>
+              <div style={{ background: '#FEE2E2', border: '1px solid #FECACA', borderRadius: 8, padding: '0.85rem', color: '#DC2626', fontSize: '0.88rem' }}>
                 ⚠️ {companyError}
               </div>
             )}
 
             {companySuccess && (
-              <div style={{ background: 'rgba(16, 185, 129, 0.15)', border: '1px solid rgba(16, 185, 129, 0.35)', borderRadius: 8, padding: '0.85rem', color: '#6EE7B7', fontSize: '0.88rem' }}>
+              <div style={{ background: '#E9F9F8', border: '1px solid #A7F3D0', borderRadius: 8, padding: '0.85rem', color: '#047857', fontSize: '0.88rem' }}>
                 {companySuccess}
               </div>
             )}
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Company / Organization Name *
                 </label>
                 <input
@@ -1328,18 +1361,18 @@ export default function RecruiterDashboard() {
                   value={companyForm.companyName}
                   onChange={(e) => setCompanyForm({ ...companyForm, companyName: e.target.value })}
                   placeholder="e.g. Delta Software Solutions"
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Industry / Business Category *
                 </label>
                 <select
                   value={companyForm.industry}
                   onChange={(e) => setCompanyForm({ ...companyForm, industry: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 >
                   <option value="Information Technology">Information Technology & Software</option>
                   <option value="Aquaculture & Agriculture">Aquaculture, Marine & Agriculture</option>
@@ -1351,7 +1384,7 @@ export default function RecruiterDashboard() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Company Website URL
                 </label>
                 <input
@@ -1359,12 +1392,12 @@ export default function RecruiterDashboard() {
                   value={companyForm.companyWebsite}
                   onChange={(e) => setCompanyForm({ ...companyForm, companyWebsite: e.target.value })}
                   placeholder="https://yourcompany.in"
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Company Logo URL
                 </label>
                 <input
@@ -1372,12 +1405,12 @@ export default function RecruiterDashboard() {
                   value={companyForm.logoUrl}
                   onChange={(e) => setCompanyForm({ ...companyForm, logoUrl: e.target.value })}
                   placeholder="https://yourcompany.in/logo.png"
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Recruiter Contact Name *
                 </label>
                 <input
@@ -1386,12 +1419,12 @@ export default function RecruiterDashboard() {
                   value={companyForm.name}
                   onChange={(e) => setCompanyForm({ ...companyForm, name: e.target.value })}
                   placeholder="e.g. Lakshman Varma"
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Recruiter Professional Designation
                 </label>
                 <input
@@ -1399,18 +1432,18 @@ export default function RecruiterDashboard() {
                   value={companyForm.designation}
                   onChange={(e) => setCompanyForm({ ...companyForm, designation: e.target.value })}
                   placeholder="e.g. Talent Acquisition Lead"
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Primary West Godavari Town *
                 </label>
                 <select
                   value={companyForm.town}
                   onChange={(e) => setCompanyForm({ ...companyForm, town: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 >
                   {WEST_GODAVARI_TOWNS.map((t) => (
                     <option key={t} value={t}>
@@ -1421,7 +1454,7 @@ export default function RecruiterDashboard() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Public Business Phone
                 </label>
                 <input
@@ -1429,12 +1462,12 @@ export default function RecruiterDashboard() {
                   value={companyForm.phone}
                   onChange={(e) => setCompanyForm({ ...companyForm, phone: e.target.value })}
                   placeholder="+91 9848012345"
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Public Hiring Email
                 </label>
                 <input
@@ -1442,13 +1475,13 @@ export default function RecruiterDashboard() {
                   value={companyForm.contactEmail}
                   onChange={(e) => setCompanyForm({ ...companyForm, contactEmail: e.target.value })}
                   placeholder="careers@company.in"
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                  style={lightInputStyle}
                 />
               </div>
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+              <label style={lightLabelStyle}>
                 Office / Regional Address in West Godavari
               </label>
               <input
@@ -1456,12 +1489,12 @@ export default function RecruiterDashboard() {
                 value={companyForm.address}
                 onChange={(e) => setCompanyForm({ ...companyForm, address: e.target.value })}
                 placeholder="Building name, Street, Landmark"
-                style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                style={lightInputStyle}
               />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+              <label style={lightLabelStyle}>
                 Company Overview & Mission
               </label>
               <textarea
@@ -1469,7 +1502,7 @@ export default function RecruiterDashboard() {
                 value={companyForm.companyDescription}
                 onChange={(e) => setCompanyForm({ ...companyForm, companyDescription: e.target.value })}
                 placeholder="Introduce your company culture, technology stack, and regional presence in Andhra Pradesh..."
-                style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem', resize: 'vertical' }}
+                style={{ ...lightInputStyle, resize: 'vertical' }}
               />
             </div>
 
@@ -1500,7 +1533,7 @@ export default function RecruiterDashboard() {
           <form onSubmit={handleEditJobSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Job Title *
                 </label>
                 <input
@@ -1508,12 +1541,12 @@ export default function RecruiterDashboard() {
                   required
                   value={editingJob.title}
                   onChange={(e) => setEditingJob({ ...editingJob, title: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Company Name *
                 </label>
                 <input
@@ -1521,18 +1554,18 @@ export default function RecruiterDashboard() {
                   required
                   value={editingJob.company}
                   onChange={(e) => setEditingJob({ ...editingJob, company: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF' }}
+                  style={lightInputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Mandal / Town *
                 </label>
                 <select
                   value={editingJob.town}
                   onChange={(e) => setEditingJob({ ...editingJob, town: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF' }}
+                  style={lightInputStyle}
                 >
                   {WEST_GODAVARI_TOWNS.map((t) => (
                     <option key={t} value={t}>
@@ -1543,13 +1576,13 @@ export default function RecruiterDashboard() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Career Category *
                 </label>
                 <select
                   value={editingJob.category}
                   onChange={(e) => setEditingJob({ ...editingJob, category: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF' }}
+                  style={lightInputStyle}
                 >
                   {JOB_CATEGORIES.map((cat) => (
                     <option key={cat.id} value={cat.id}>
@@ -1560,13 +1593,13 @@ export default function RecruiterDashboard() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Employment Type
                 </label>
                 <select
                   value={editingJob.employmentType}
                   onChange={(e) => setEditingJob({ ...editingJob, employmentType: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF' }}
+                  style={lightInputStyle}
                 >
                   <option value="Full-time">Full-time</option>
                   <option value="Part-time">Part-time</option>
@@ -1576,13 +1609,13 @@ export default function RecruiterDashboard() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+                <label style={lightLabelStyle}>
                   Publication Status
                 </label>
                 <select
                   value={editingJob.status}
                   onChange={(e) => setEditingJob({ ...editingJob, status: e.target.value })}
-                  style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF' }}
+                  style={lightInputStyle}
                 >
                   <option value="published">Published (Active)</option>
                   <option value="closed">Closed</option>
@@ -1592,7 +1625,7 @@ export default function RecruiterDashboard() {
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+              <label style={lightLabelStyle}>
                 Salary / Compensation
               </label>
               <input
@@ -1600,12 +1633,12 @@ export default function RecruiterDashboard() {
                 value={editingJob.salary || ''}
                 onChange={(e) => setEditingJob({ ...editingJob, salary: e.target.value })}
                 placeholder="e.g. ₹3.5 - ₹5.0 LPA or Salary Disclosed Upon Request"
-                style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF' }}
+                style={lightInputStyle}
               />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+              <label style={lightLabelStyle}>
                 Detailed Description *
               </label>
               <textarea
@@ -1613,7 +1646,7 @@ export default function RecruiterDashboard() {
                 required
                 value={editingJob.description}
                 onChange={(e) => setEditingJob({ ...editingJob, description: e.target.value })}
-                style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem', color: '#FFF', resize: 'vertical' }}
+                style={{ ...lightInputStyle, resize: 'vertical' }}
               />
             </div>
 
@@ -1621,7 +1654,7 @@ export default function RecruiterDashboard() {
               <button
                 type="button"
                 onClick={() => setEditingJob(null)}
-                style={{ background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)', color: '#CBD5E1', padding: '0.6rem 1.25rem', borderRadius: 8, cursor: 'pointer' }}
+                style={{ background: '#F1F5F9', border: '1px solid #E1EDF3', color: '#17365D', padding: '0.6rem 1.25rem', borderRadius: 8, cursor: 'pointer' }}
                 disabled={isSavingJob}
               >
                 Cancel
@@ -1651,19 +1684,19 @@ export default function RecruiterDashboard() {
         >
           <form onSubmit={handleSaveStatus} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {statusError && (
-              <div style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', borderRadius: 8, padding: '0.75rem', color: '#FCA5A5', fontSize: '0.85rem' }}>
+              <div style={{ background: '#FEE2E2', border: '1px solid #FECACA', borderRadius: 8, padding: '0.75rem', color: '#DC2626', fontSize: '0.85rem' }}>
                 ⚠️ {statusError}
               </div>
             )}
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+              <label style={lightLabelStyle}>
                 Application Status *
               </label>
               <select
                 value={newStatus}
                 onChange={(e) => setNewStatus(e.target.value)}
-                style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem' }}
+                style={lightInputStyle}
               >
                 {APPLICATION_STATUS_OPTIONS.map((st) => (
                   <option key={st} value={st}>
@@ -1674,7 +1707,7 @@ export default function RecruiterDashboard() {
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#F8FAFC', marginBottom: '0.35rem' }}>
+              <label style={lightLabelStyle}>
                 Recruiter Notes / Candidate Feedback
               </label>
               <textarea
@@ -1682,31 +1715,31 @@ export default function RecruiterDashboard() {
                 onChange={(e) => setStatusNotes(e.target.value)}
                 placeholder="Optional notes visible to hiring team and candidate..."
                 rows={3}
-                style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', color: '#FFF', fontSize: '0.9rem', resize: 'vertical' }}
+                style={{ ...lightInputStyle, resize: 'vertical' }}
               />
             </div>
 
             {/* Conditional Interview Scheduling Section */}
             {newStatus === 'Interview Scheduled' && (
-              <div style={{ background: 'rgba(124, 58, 237, 0.12)', border: '1px solid rgba(167, 139, 250, 0.35)', borderRadius: 8, padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#C4B5FD', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <div style={{ background: '#F3EFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#6D28D9', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <span>📅</span> Schedule Interview Session
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', color: '#E2E8F0', marginBottom: '0.25rem' }}>
+                    <label style={{ ...lightLabelStyle, fontSize: '0.8rem', marginBottom: '0.25rem' }}>
                       Interview Date *
                     </label>
                     <input
                       type="date"
                       value={interviewDate}
                       onChange={(e) => setInterviewDate(e.target.value)}
-                      style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 6, padding: '0.55rem', color: '#FFF', fontSize: '0.85rem' }}
+                      style={lightInputSmStyle}
                     />
                   </div>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', color: '#E2E8F0', marginBottom: '0.25rem' }}>
+                    <label style={{ ...lightLabelStyle, fontSize: '0.8rem', marginBottom: '0.25rem' }}>
                       Time (e.g. 10:30 AM IST) *
                     </label>
                     <input
@@ -1714,13 +1747,13 @@ export default function RecruiterDashboard() {
                       placeholder="11:00 AM"
                       value={interviewTime}
                       onChange={(e) => setInterviewTime(e.target.value)}
-                      style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 6, padding: '0.55rem', color: '#FFF', fontSize: '0.85rem' }}
+                      style={lightInputSmStyle}
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.8rem', color: '#E2E8F0', marginBottom: '0.25rem' }}>
+                  <label style={{ ...lightLabelStyle, fontSize: '0.8rem', marginBottom: '0.25rem' }}>
                     Meeting Link (Google Meet / Zoom URL)
                   </label>
                   <input
@@ -1728,12 +1761,12 @@ export default function RecruiterDashboard() {
                     placeholder="https://meet.google.com/xyz-abcd-efg"
                     value={meetingLink}
                     onChange={(e) => setMeetingLink(e.target.value)}
-                    style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 6, padding: '0.55rem', color: '#FFF', fontSize: '0.85rem' }}
+                    style={lightInputSmStyle}
                   />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.8rem', color: '#E2E8F0', marginBottom: '0.25rem' }}>
+                  <label style={{ ...lightLabelStyle, fontSize: '0.8rem', marginBottom: '0.25rem' }}>
                     Physical Venue / Office Address (if in-person)
                   </label>
                   <input
@@ -1741,12 +1774,12 @@ export default function RecruiterDashboard() {
                     placeholder="Bhimavaram Tech Center, 2nd Floor"
                     value={interviewLocation}
                     onChange={(e) => setInterviewLocation(e.target.value)}
-                    style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 6, padding: '0.55rem', color: '#FFF', fontSize: '0.85rem' }}
+                    style={lightInputSmStyle}
                   />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.8rem', color: '#E2E8F0', marginBottom: '0.25rem' }}>
+                  <label style={{ ...lightLabelStyle, fontSize: '0.8rem', marginBottom: '0.25rem' }}>
                     Preparation Notes / Interview Agenda
                   </label>
                   <textarea
@@ -1754,7 +1787,7 @@ export default function RecruiterDashboard() {
                     placeholder="E.g. Technical live coding round, please have your laptop ready."
                     value={interviewNotes}
                     onChange={(e) => setInterviewNotes(e.target.value)}
-                    style={{ width: '100%', background: '#0F172A', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: 6, padding: '0.55rem', color: '#FFF', fontSize: '0.85rem' }}
+                    style={{ ...lightInputSmStyle, resize: 'vertical' }}
                   />
                 </div>
               </div>
@@ -1764,7 +1797,7 @@ export default function RecruiterDashboard() {
               <button
                 type="button"
                 onClick={() => setStatusModalApp(null)}
-                style={{ background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)', color: '#CBD5E1', padding: '0.6rem 1.25rem', borderRadius: 8, cursor: 'pointer', fontSize: '0.88rem' }}
+                style={{ background: '#F1F5F9', border: '1px solid #E1EDF3', color: '#17365D', padding: '0.6rem 1.25rem', borderRadius: 8, cursor: 'pointer', fontSize: '0.88rem' }}
                 disabled={isSavingStatus}
               >
                 Cancel

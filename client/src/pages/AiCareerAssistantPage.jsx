@@ -351,10 +351,10 @@ export default function AiCareerAssistantPage() {
         <div className={styles.mainCard}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#F8FAFC' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#17365D' }}>
                 {t('ai.chatTab', 'Interactive Career Guidance Chat')}
               </h2>
-              <p style={{ fontSize: '0.84rem', color: '#94A3B8' }}>
+              <p style={{ fontSize: '0.84rem', color: '#526B85' }}>
                 {t('ai.subtitle', 'Ask questions about career paths, regional employer expectations, fresher resumes, or technical roadmaps.')}
               </p>
             </div>
@@ -468,10 +468,10 @@ export default function AiCareerAssistantPage() {
       {activeTool === 'resume' && (
         <div className={styles.mainCard}>
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#F8FAFC' }}>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#17365D' }}>
               {t('ai.resumeTab', 'Resume & Candidate Profile Review')}
             </h2>
-            <p style={{ fontSize: '0.84rem', color: '#94A3B8' }}>
+            <p style={{ fontSize: '0.84rem', color: '#526B85' }}>
               Receive AI suggestions for your professional summary, ATS keywords, portfolio projects, and formatting.
             </p>
           </div>
@@ -617,10 +617,10 @@ export default function AiCareerAssistantPage() {
       {activeTool === 'skillgap' && (
         <div className={styles.mainCard}>
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#F8FAFC' }}>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#17365D' }}>
               {t('ai.skillGapTab', 'Skill-Gap & Career Learning Path Analysis')}
             </h2>
-            <p style={{ fontSize: '0.84rem', color: '#94A3B8' }}>
+            <p style={{ fontSize: '0.84rem', color: '#526B85' }}>
               Compare your current competencies against your target role or a specific job posting to discover missing skills and receive a 4-week learning roadmap.
             </p>
           </div>
@@ -706,10 +706,10 @@ export default function AiCareerAssistantPage() {
       {activeTool === 'interview' && (
         <div className={styles.mainCard}>
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#F8FAFC' }}>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#17365D' }}>
               {t('ai.interviewTab', 'Interview Preparation & Feedback Studio')}
             </h2>
-            <p style={{ fontSize: '0.84rem', color: '#94A3B8' }}>
+            <p style={{ fontSize: '0.84rem', color: '#526B85' }}>
               Generate role-specific practice questions with STAR structures, or submit your answers for constructive AI critique.
             </p>
           </div>

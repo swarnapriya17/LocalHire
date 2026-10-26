@@ -71,13 +71,13 @@ export default function CareerResources({ onShowToast }) {
               <button
                 type="button"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  color: '#F8FAFC',
+                  background: '#FFFFFF',
+                  border: '1px solid #E1EDF3',
+                  color: '#17365D',
                   padding: '0.65rem 1.25rem',
                   borderRadius: 8,
                   cursor: 'pointer',
-                  fontWeight: 600
+                  fontWeight: 600,
                 }}
                 onClick={handleBookmarkResource}
               >
@@ -86,13 +86,14 @@ export default function CareerResources({ onShowToast }) {
               <button
                 type="button"
                 style={{
-                  background: 'linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%)',
+                  background: 'var(--primary-teal)',
                   border: 'none',
                   color: '#FFFFFF',
                   padding: '0.65rem 1.5rem',
                   borderRadius: 8,
                   cursor: 'pointer',
-                  fontWeight: 700
+                  fontWeight: 700,
+                  boxShadow: '0 4px 14px rgba(15, 157, 150, 0.25)',
                 }}
                 onClick={() => setActiveResource(null)}
               >
@@ -103,14 +104,14 @@ export default function CareerResources({ onShowToast }) {
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {/* Key Takeaways Box */}
-            <div style={{ background: 'rgba(124, 58, 237, 0.12)', border: '1px solid rgba(124, 58, 237, 0.3)', borderRadius: 10, padding: '1.25rem' }}>
-              <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#C4B5FD', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.75rem' }}>
+            <div style={{ background: '#F3EFFF', border: '1px solid #DDD6FE', borderRadius: 10, padding: '1.25rem' }}>
+              <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.75rem' }}>
                 💡 Key Actionable Takeaways
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 {activeResource.keyPoints.map((point, idx) => (
-                  <li key={idx} style={{ display: 'flex', gap: '0.5rem', fontSize: '0.9rem', color: '#F8FAFC', lineHeight: 1.5 }}>
-                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span>
+                  <li key={idx} style={{ display: 'flex', gap: '0.5rem', fontSize: '0.9rem', color: '#17365D', lineHeight: 1.5 }}>
+                    <span style={{ color: 'var(--primary-teal)', fontWeight: 700 }}>✓</span>
                     <span>{point}</span>
                   </li>
                 ))}
@@ -119,10 +120,10 @@ export default function CareerResources({ onShowToast }) {
 
             {/* Detailed Content */}
             <div>
-              <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#F8FAFC', marginBottom: '0.75rem' }}>
+              <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#17365D', marginBottom: '0.75rem' }}>
                 In-Depth Guide
               </h4>
-              <div style={{ color: '#94A3B8', fontSize: '0.94rem', lineHeight: 1.7, whiteSpace: 'pre-line' }}>
+              <div style={{ color: '#526B85', fontSize: '0.94rem', lineHeight: 1.7, whiteSpace: 'pre-line' }}>
                 {activeResource.detailedContent}
               </div>
             </div>

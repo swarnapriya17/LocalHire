@@ -5,6 +5,7 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import Toast from '../components/common/Toast';
 import HeroSection from '../components/home/HeroSection';
+import BenefitsSection from '../components/home/BenefitsSection';
 import JobCategories from '../components/home/JobCategories';
 import JobSection from '../components/home/JobSection';
 import EmployerShowcase from '../components/home/EmployerShowcase';
@@ -166,7 +167,10 @@ export default function HomePage() {
           }}
         />
 
-        {/* 4. Job Categories (8 Pillars) */}
+        {/* 4. Benefits Section (Verified Employers, Local Opportunities, Career Growth, Support) */}
+        <BenefitsSection />
+
+        {/* 5. Job Categories (8 Pillars) */}
         <JobCategories
           selectedCategory={selectedCategory}
           onSelectCategory={(catId) => {

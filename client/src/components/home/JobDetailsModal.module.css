@@ -5,12 +5,12 @@
 }
 
 .demoAlert {
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
   border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
   font-size: 0.85rem;
-  color: #FCD34D;
+  color: #92400E;
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
@@ -21,8 +21,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  background: rgba(11, 16, 32, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #F5FAFC;
+  border: 1px solid var(--border-color);
   padding: 1.25rem;
   border-radius: var(--radius-md);
 }
@@ -37,12 +37,13 @@
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-dim);
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
 .metaValue {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-main);
 }
 
@@ -84,7 +85,7 @@
 }
 
 .bulletDot {
-  color: var(--accent-light);
+  color: var(--primary-teal);
   font-weight: 700;
   line-height: 1.4;
 }
@@ -96,10 +97,11 @@
 }
 
 .perkPill {
-  background: rgba(124, 58, 237, 0.12);
-  border: 1px solid rgba(124, 58, 237, 0.25);
-  color: var(--accent-light);
+  background: #E9F9F8;
+  border: 1px solid #A7F3D0;
+  color: #0F766E;
   font-size: 0.82rem;
+  font-weight: 600;
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
 }
@@ -110,18 +112,19 @@
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--accent-primary) 0%, #6D28D9 100%);
+  background: var(--primary-teal);
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.95rem;
-  box-shadow: 0 4px 14px var(--accent-glow);
+  border: none;
+  box-shadow: 0 4px 14px rgba(15, 157, 150, 0.25);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .applyBtn:hover {
-  background: linear-gradient(135deg, #8B5CF6 0%, var(--accent-primary) 100%);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+  background: var(--teal-dark);
+  box-shadow: 0 6px 20px rgba(15, 157, 150, 0.35);
 }
 
 .saveModalBtn {
@@ -130,8 +133,8 @@
   gap: 0.4rem;
   padding: 0.75rem 1.25rem;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   color: var(--text-main);
   font-weight: 600;
   font-size: 0.95rem;
@@ -140,14 +143,14 @@
 }
 
 .saveModalBtn:hover {
-  background: rgba(236, 72, 153, 0.15);
-  border-color: rgba(236, 72, 153, 0.4);
-  color: #F472B6;
+  background: #F3EFFF;
+  border-color: var(--accent-lavender);
+  color: var(--accent-lavender);
 }
 
 .applyFormSection {
-  background: rgba(11, 16, 32, 0.85);
-  border: 1px solid rgba(124, 58, 237, 0.35);
+  background: #F5FAFC;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   display: flex;
@@ -159,7 +162,7 @@
 .applyFormTitle {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #F8FAFC;
+  color: var(--text-main);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -179,11 +182,11 @@
 
 .formInput,
 .formTextarea {
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
-  color: #F8FAFC;
+  color: var(--text-main);
   font-size: 0.9rem;
   font-family: inherit;
   transition: all var(--transition-fast);
@@ -192,8 +195,8 @@
 .formInput:focus,
 .formTextarea:focus {
   outline: none;
-  border-color: #8B5CF6;
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(15, 157, 150, 0.15);
 }
 
 .formTextarea {
@@ -202,21 +205,21 @@
 }
 
 .errorBanner {
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.35);
+  background: #FEE2E2;
+  border: 1px solid #FECACA;
   border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
-  color: #FCA5A5;
+  color: #DC2626;
   font-size: 0.85rem;
   line-height: 1.45;
 }
 
 .successBanner {
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: #E9F9F8;
+  border: 1px solid #A7F3D0;
   border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
-  color: #6EE7B7;
+  color: #0F766E;
   font-size: 0.88rem;
   line-height: 1.45;
   display: flex;
@@ -226,7 +229,7 @@
 
 .infoNote {
   font-size: 0.78rem;
-  color: var(--text-dim);
+  color: var(--text-muted);
   line-height: 1.4;
 }
 
@@ -239,8 +242,8 @@
 }
 
 .cancelBtn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   color: var(--text-muted);
   padding: 0.65rem 1.25rem;
   border-radius: var(--radius-md);
@@ -251,6 +254,7 @@
 }
 
 .cancelBtn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #FFFFFF;
+  background: #F5FAFC;
+  color: var(--text-main);
+  border-color: var(--primary-teal);
 }

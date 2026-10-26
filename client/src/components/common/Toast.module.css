@@ -16,12 +16,10 @@
   gap: 0.75rem;
   padding: 0.85rem 1.25rem;
   border-radius: var(--radius-md);
-  background: rgba(17, 26, 46, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-active);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
   color: var(--text-main);
-  box-shadow: var(--shadow-lg), 0 0 20px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 10px 30px rgba(23, 54, 93, 0.12);
   font-size: 0.9rem;
   font-weight: 500;
   animation: slideInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -29,11 +27,11 @@
 }
 
 .toastSuccess {
-  border-color: rgba(16, 185, 129, 0.4);
+  border-left: 4px solid var(--primary-teal);
 }
 
 .toastInfo {
-  border-color: rgba(124, 58, 237, 0.4);
+  border-left: 4px solid var(--accent-lavender);
 }
 
 .toastIcon {

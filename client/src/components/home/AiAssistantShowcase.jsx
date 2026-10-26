@@ -138,14 +138,15 @@ export default function AiAssistantShowcase({ onShowToast }) {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.6rem',
-              background: 'linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%)',
+              background: 'var(--primary-teal)',
               color: '#FFFFFF',
               padding: '0.75rem 1.6rem',
               borderRadius: 10,
               fontWeight: 700,
               fontSize: '0.95rem',
               textDecoration: 'none',
-              boxShadow: '0 4px 18px rgba(124, 58, 237, 0.35)',
+              boxShadow: '0 4px 14px rgba(15, 157, 150, 0.25)',
+              transition: 'background 0.2s',
             }}
           >
             <span>⚡</span> {t('aiShowcase.launchBtn', 'Launch AI Career Assistant')} →
@@ -192,7 +193,7 @@ export default function AiAssistantShowcase({ onShowToast }) {
           {/* Right: Mock UI Output Card */}
           <div className={styles.mockUiCard}>
             <div className={styles.mockHeader}>
-              <span style={{ fontWeight: 700, color: '#F8FAFC' }}>
+              <span style={{ fontWeight: 700, color: '#17365D' }}>
                 {currentCapability.mockSample.title}
               </span>
               <span className={styles.mockBadge}>
@@ -203,7 +204,7 @@ export default function AiAssistantShowcase({ onShowToast }) {
             <div className={styles.mockContent}>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
                 {currentCapability.mockSample.details.map((item, idx) => (
-                  <li key={idx} style={{ color: '#E2E8F0', fontSize: '0.86rem', lineHeight: 1.5 }}>
+                  <li key={idx} style={{ color: '#526B85', fontSize: '0.86rem', lineHeight: 1.5 }}>
                     {item}
                   </li>
                 ))}
