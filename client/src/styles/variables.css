@@ -1,0 +1,60 @@
+:root {
+  /* Main Theme Color Palette */
+  --bg-primary: #F8FAFC;        /* Main background */
+  --bg-secondary: #F1F5F9;      /* Subtle light-grey section background */
+  --bg-card: #FFFFFF;           /* Card and panel background */
+  --bg-card-hover: #F8FAFC;     /* Card hover background */
+  --bg-light-blue: #EFF6FF;     /* Light-blue background */
+  --bg-surface: #FFFFFF;
+
+  /* Primary Blue Accents */
+  --accent-primary: #2563EB;     /* Primary blue */
+  --accent-hover: #1D4ED8;       /* Primary blue hover */
+  --accent-light: #3B82F6;       /* Bright blue */
+  --accent-subtle: #EFF6FF;      /* Light blue badge background */
+  --accent-glow: rgba(37, 99, 235, 0.15); /* Soft blue shadow */
+
+  /* Status Colors */
+  --status-success: #16A34A;
+  --status-success-bg: #DCFCE7;
+  --status-warning: #D97706;
+  --status-warning-bg: #FEF3C7;
+  --status-error: #DC2626;
+  --status-error-bg: #FEE2E2;
+
+  /* Typography Colors */
+  --text-main: #172033;         /* Main headings */
+  --text-muted: #475569;        /* Body text */
+  --text-dim: #64748B;          /* Secondary text */
+  --text-accent: #2563EB;       /* Accent link/highlight text */
+  --text-inverse: #FFFFFF;      /* Text on dark buttons */
+
+  /* Borders & Dividers */
+  --border-subtle: #E2E8F0;     /* Borders */
+  --border-card: #E2E8F0;       /* Card borders */
+  --border-active: #93C5FD;     /* Active blue border */
+  --border-focus: #2563EB;      /* Focused input border */
+
+  /* Shadows & Elevations */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 4px 12px rgba(37, 99, 235, 0.12);
+  --shadow-glow-intense: 0 8px 24px rgba(37, 99, 235, 0.18);
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}

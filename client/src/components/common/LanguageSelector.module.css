@@ -1,0 +1,48 @@
+.selectorWrapper {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  padding: 3px;
+  position: relative;
+  user-select: none;
+}
+
+.langBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.28rem 0.65rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  line-height: 1;
+}
+
+.langBtn:hover {
+  color: var(--text-main);
+}
+
+.activeLang {
+  background: var(--accent-primary);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.25);
+}
+
+.langIcon {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .langBtn {
+    padding: 0.24rem 0.5rem;
+    font-size: 0.78rem;
+  }
+}

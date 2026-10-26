@@ -1,0 +1,368 @@
+/**
+ * Illustrative Sample Jobs Dataset for LocalHire
+ * Note: All listings here are demo previews prepared for testing search, filters, and UI interactions.
+ * Live vacancies and verified employer submissions will be connected via API in subsequent stages.
+ */
+
+export const mockJobs = [
+  {
+    id: 'job-1',
+    title: 'Junior Frontend Developer (React / JavaScript)',
+    company: 'Godavari Digital Solutions',
+    town: 'Bhimavaram',
+    locationDetail: 'Near Somaram Temple Road, Bhimavaram',
+    category: 'it-software',
+    employmentType: 'Full-time',
+    workMode: 'Hybrid (3 days in-office)',
+    experience: 'Fresher / 0 - 1 Year',
+    isFresher: true,
+    salary: '₹3.2 - ₹4.5 LPA',
+    postedDaysAgo: '1 day ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Join a dynamic regional software agency building modern web applications for local e-commerce, aqua-trading portals, and SaaS businesses. Perfect for talented freshers or early-career developers with solid HTML, CSS, JavaScript, and React basics.',
+    responsibilities: [
+      'Build responsive, mobile-first user interfaces using React and modern CSS.',
+      'Collaborate with senior developers on REST API integration.',
+      'Optimize web pages for maximum performance and cross-browser reliability.',
+      'Participate in sprint code reviews and continuous UI refinement.'
+    ],
+    requirements: [
+      'B.Tech / B.Sc / MCA in Computer Science or related degree (or equivalent project portfolio).',
+      'Solid command of JavaScript (ES6+), React.js, and CSS layout models (Flexbox / Grid).',
+      'Familiarity with Git version control and GitHub workflow.',
+      'Resident of or willing to relocate to Bhimavaram / West Godavari.'
+    ],
+    perks: ['Mentorship from senior leads', 'Flexible hybrid timings', 'Health insurance coverage', 'Annual performance bonus']
+  },
+  {
+    id: 'job-2',
+    title: 'Quality Assurance Chemist (Aquaculture)',
+    company: 'Coastal Blue Agro & Aqua Labs',
+    town: 'Bhimavaram',
+    locationDetail: 'Industrial Estate, Bhimavaram',
+    category: 'skilled-technical',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: '1 - 3 Years',
+    isFresher: false,
+    salary: '₹22,000 - ₹30,000 / month',
+    postedDaysAgo: '2 days ago',
+    urgency: 'Priority Hiring',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Conduct chemical analysis, microbiological testing, and quality certification of shrimp and fish feed samples in a state-of-the-art laboratory adhering to MPEDA and international export standards.',
+    responsibilities: [
+      'Perform proximate analysis of raw feed ingredients and finished aquatic feeds.',
+      'Calibrate lab testing instruments (spectrophotometer, titration apparatus).',
+      'Document sample batch records and issue quality inspection certificates.',
+      'Coordinate with production floor leads on moisture, protein, and contamination standards.'
+    ],
+    requirements: [
+      'B.Sc / M.Sc in Chemistry, Industrial Chemistry, Fishery Science, or Biochemistry.',
+      '1+ year of hands-on laboratory testing experience (aqua lab experience strongly preferred).',
+      'Disciplined adherence to GLP (Good Laboratory Practices).',
+      'Basic working knowledge of MS Excel for logging analysis parameters.'
+    ],
+    perks: ['Provident fund & ESI benefits', 'Subsidized on-campus meals', 'Overtime allowances', 'Annual safety bonus']
+  },
+  {
+    id: 'job-3',
+    title: 'Assistant Branch Accountant',
+    company: 'Godavari Rural Credit Cooperative',
+    town: 'Eluru',
+    locationDetail: 'Powerpet Main Road, Eluru',
+    category: 'office-admin',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: '0 - 2 Years',
+    isFresher: true,
+    salary: '₹18,000 - ₹25,000 / month',
+    postedDaysAgo: '3 days ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Support daily branch ledger management, cashier reconciliation, passbook updates, loan disbursement documentation, and customer balance confirmations for regional micro-enterprises.',
+    responsibilities: [
+      'Maintain day-to-day debit/credit vouchers in Tally ERP.',
+      'Reconcile daily cash counter balances with bank statement sheets.',
+      'Prepare monthly GST compliance schedules and TDS deductions.',
+      'Assist branch auditors during quarterly statutory inspections.'
+    ],
+    requirements: [
+      'B.Com or M.Com from a recognized university.',
+      'Proficiency in Tally Prime / ERP 9 and MS Excel (VLOOKUP, Pivot Tables).',
+      'High accuracy with numerical bookkeeping and ledger balancing.',
+      'Good communication in Telugu and functional English.'
+    ],
+    perks: ['Standard banking work hours', 'Bank employee medical benefits', 'Gratuity eligibility', 'Festive bonus']
+  },
+  {
+    id: 'job-4',
+    title: 'Retail Store Supervisor & Sales Lead',
+    company: 'Sri Venkata Fabrics & Lifestyle',
+    town: 'Tanuku',
+    locationDetail: 'Sajjapuram Commercial Ring, Tanuku',
+    category: 'retail-sales',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: '2 - 4 Years',
+    isFresher: false,
+    salary: '₹20,000 - ₹28,000 / month',
+    postedDaysAgo: '1 day ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Manage a prominent multi-brand retail apparel store in Tanuku. Oversee sales associates, visual merchandising, stock replenishment, billing operations, and ensure high customer satisfaction.',
+    responsibilities: [
+      'Lead a team of 8 retail sales associates and schedule shift rosters.',
+      'Track daily sales targets, peak hour conversions, and customer feedback.',
+      'Manage inventory audits, incoming consignments, and shrinkage controls.',
+      'Handle POS cash registers and resolve customer exchange inquiries.'
+    ],
+    requirements: [
+      'Intermediate / Degree in any stream.',
+      '2+ years experience in retail showroom management or counter sales.',
+      'Pleasant personality and strong customer service orientation.',
+      'Fluency in Telugu and basic spoken English.'
+    ],
+    perks: ['Monthly sales commission incentive', 'Store product discount', 'ESI and PF benefits', 'Annual festive clothing allowance']
+  },
+  {
+    id: 'job-5',
+    title: 'Staff Nurse (ICU & General Ward)',
+    company: 'KIMS Sanjeevani Care Hospital',
+    town: 'Eluru',
+    locationDetail: 'Sanivarapupeta Road, Eluru',
+    category: 'healthcare',
+    employmentType: 'Full-time',
+    workMode: 'On-site (Rotational shifts)',
+    experience: '0 - 3 Years',
+    isFresher: true,
+    salary: '₹20,000 - ₹32,000 / month',
+    postedDaysAgo: 'Just now',
+    urgency: 'Urgent Requirement',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Provide compassionate, clinical patient care, administer doctor-prescribed medications, monitor vital signs, and assist in patient recovery in a certified 150-bed multi-specialty hospital in Eluru.',
+    responsibilities: [
+      'Monitor and log vital signs, IV infusions, and medication timings.',
+      'Assist duty physicians and surgeons during rounds and minor procedures.',
+      'Prepare patients for diagnostic tests, operations, and clinical discharges.',
+      'Adhere strictly to infection control protocols and sterilization guidelines.'
+    ],
+    requirements: [
+      'GNM (General Nursing & Midwifery) or B.Sc Nursing certificate.',
+      'Registered with Andhra Pradesh Nursing Council.',
+      'Open to fresh graduates with clinical internship completion.',
+      'Empathy, patient dedication, and ability to handle emergency ward situations.'
+    ],
+    perks: ['Hostel facility available', 'Shift allowance', 'Subsidized hospital healthcare for family', 'Uniform allowance']
+  },
+  {
+    id: 'job-6',
+    title: 'High School Mathematics & Science Teacher',
+    company: 'Saraswati Vidya Mandir High School',
+    town: 'Tadepalligudem',
+    locationDetail: 'Near Railway Station Road, Tadepalligudem',
+    category: 'education',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: '1 - 3 Years',
+    isFresher: false,
+    salary: '₹18,000 - ₹26,000 / month',
+    postedDaysAgo: '4 days ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Deliver engaging, concept-driven Mathematics and General Science classes for grades 7 through 10 (State / CBSE syllabus), cultivate student problem-solving skills, and prepare learners for board exams.',
+    responsibilities: [
+      'Design comprehensive lesson plans, interactive quizzes, and visual experiments.',
+      'Conduct regular formative assessments and maintain student progress report cards.',
+      'Hold parent-teacher meetings to provide constructive academic guidance.',
+      'Supervise science exhibitions and extracurricular STEM competitions.'
+    ],
+    requirements: [
+      'B.Sc / M.Sc in Mathematics, Physics, or Chemistry with B.Ed degree.',
+      'Proven classroom teaching experience or exceptional fresher demonstration.',
+      'Fluency in English and Telugu instruction medium.',
+      'Strong classroom leadership and passion for student development.'
+    ],
+    perks: ['Tuition fee concession for children', 'Paid summer vacation', 'Teacher training workshops', 'Annual performance increment']
+  },
+  {
+    id: 'job-7',
+    title: 'Electrical Maintenance Technician',
+    company: 'Andhra Sugars & Chemical Complex',
+    town: 'Tanuku',
+    locationDetail: 'Industrial Area, Tanuku',
+    category: 'skilled-technical',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: '1 - 4 Years',
+    isFresher: false,
+    salary: '₹24,000 - ₹34,000 / month',
+    postedDaysAgo: '2 days ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Inspect, maintain, and troubleshoot 3-phase industrial motors, switchgear panels, HT/LT transformers, and automation control systems across manufacturing plant facilities in Tanuku.',
+    responsibilities: [
+      'Execute preventive maintenance schedules on boilers, heavy drives, and turbine electricals.',
+      'Diagnose wiring breakdowns, tripped circuit breakers, and faulty relays quickly.',
+      'Install industrial conduit piping, cable trays, and motor control centers (MCC).',
+      'Follow plant safety standards, lockout/tagout (LOTO) protocols, and PPE compliance.'
+    ],
+    requirements: [
+      'ITI in Electrician or Diploma in Electrical & Electronics Engineering (EEE).',
+      'Valid Electrical Wireman / Supervisor license issued by AP government.',
+      'Hands-on experience with industrial panels, starters, and diesel generator sync.',
+      'Ability to read single-line circuit diagrams.'
+    ],
+    perks: ['Plant transportation provided', 'Canteen subsidy', 'Overtime earnings', 'Comprehensive group medical policy']
+  },
+  {
+    id: 'job-8',
+    title: 'Hotel Front Office Executive & Guest Host',
+    company: 'River View Grand Residency',
+    town: 'Palakollu',
+    locationDetail: 'Bypass Road, Palakollu',
+    category: 'hospitality',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: 'Fresher / 0 - 2 Years',
+    isFresher: true,
+    salary: '₹16,000 - ₹22,000 / month',
+    postedDaysAgo: '5 days ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Welcome arriving guests, manage smooth room check-ins/check-outs, respond to telephone reservations, handle billing folios, and ensure memorable guest stays at a luxury business hotel.',
+    responsibilities: [
+      'Operate hotel property management software (PMS) for guest bookings and room allocations.',
+      'Handle guest enquiries regarding local transportation, tourist spots, and banquet services.',
+      'Coordinate with housekeeping and room service teams for seamless guest requests.',
+      'Settle guest bills via POS card machines, UPI, and cash with high accuracy.'
+    ],
+    requirements: [
+      'Degree or Diploma in Hotel Management / Tourism / Arts / Commerce.',
+      'Pleasing phone etiquette and friendly in-person demeanor.',
+      'Clear communication skills in Telugu and English (Hindi is an advantage).',
+      'Basic computer literacy and typing speed.'
+    ],
+    perks: ['Duty meals included', 'Uniform provided and laundered', 'Service charge incentives', 'Career growth path to duty manager']
+  },
+  {
+    id: 'job-9',
+    title: 'Agri-Commodities Field Executive',
+    company: 'Godavari Agri Warehousing & Logistics',
+    town: 'Jangareddygudem',
+    locationDetail: 'Market Yard Junction, Jangareddygudem',
+    category: 'skilled-technical',
+    employmentType: 'Full-time',
+    workMode: 'Field / On-site',
+    experience: 'Fresher / 0 - 2 Years',
+    isFresher: true,
+    salary: '₹18,000 - ₹24,000 / month + Fuel',
+    postedDaysAgo: '1 day ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Connect with local oil palm, cashew, and tobacco cultivators across agency mandals, verify crop moisture grades, supervise bagging logistics, and facilitate weighbridge receipt issuances.',
+    responsibilities: [
+      'Visit partner farmer clusters and collection centers across Jangareddygudem mandal.',
+      'Sample harvest lots and test grade parameters before warehouse dispatch.',
+      'Issue electronic weighbridge slips and record farmer settlement accounts.',
+      'Coordinate freight trucks for dispatch to regional processing mills.'
+    ],
+    requirements: [
+      'B.Sc Agriculture / Diploma in Agriculture / Any graduate with rural exposure.',
+      'Possession of two-wheeler with valid driving license (compulsory).',
+      'Familiarity with local regional crop cycles and agricultural geography.',
+      'Basic smartphone literacy for mobile ERP data entry.'
+    ],
+    perks: ['Daily travel & fuel allowance', 'Mobile phone bill reimbursement', 'Accident insurance coverage', 'Harvest season incentive']
+  },
+  {
+    id: 'job-10',
+    title: 'International Export Documentation Officer',
+    company: 'Delta Lace & Marine Handlooms',
+    town: 'Narsapur',
+    locationDetail: 'Port Canal Road, Narsapur',
+    category: 'office-admin',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: '1 - 3 Years',
+    isFresher: false,
+    salary: '₹22,000 - ₹30,000 / month',
+    postedDaysAgo: '3 days ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Prepare customs shipping bills, commercial invoices, letters of credit (LC), certificate of origin documents, and coordinate with clearing agents for overseas textile and marine shipments.',
+    responsibilities: [
+      'Draft proforma invoices, packing lists, and bills of lading.',
+      'Coordinate with CHA (Customs House Agents) at Chennai and Vizag ports.',
+      'Track container sailing schedules and update overseas buyers via email.',
+      'Maintain duty drawback files and export incentive records.'
+    ],
+    requirements: [
+      'Degree in Commerce, Foreign Trade, Logistics, or Business Administration.',
+      'Experience in export documentation or shipping logistics.',
+      'Proficient written English communication for buyer correspondence.',
+      'Working knowledge of DGFT portal and customs documentation standards.'
+    ],
+    perks: ['Annual export milestone bonus', 'PF & ESI retirement benefits', 'Health insurance', 'Paid festival leaves']
+  },
+  {
+    id: 'job-11',
+    title: 'Graduate Trainee - Embedded Systems & IoT',
+    company: 'Delta IoT Solutions (Incubated at NIT AP)',
+    town: 'Tadepalligudem',
+    locationDetail: 'NIT Andhra Pradesh Incubation Cell, Tadepalligudem',
+    category: 'fresher-opportunities',
+    employmentType: 'Internship / Full-time Trainee',
+    workMode: 'On-site',
+    experience: 'Fresher / 0 Years',
+    isFresher: true,
+    salary: '₹18,000 / month (Stipend during 6-mo training)',
+    postedDaysAgo: 'Just now',
+    urgency: 'Fresher Special',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Work alongside NIT AP researchers developing smart water sensor nodes and automated aquaculture aerator controllers. Fast-track conversion into permanent Embedded Engineer position upon training completion.',
+    responsibilities: [
+      'Write and test firmware in Embedded C / C++ on ESP32 and STM32 microcontrollers.',
+      'Interface temperature, dissolved oxygen, and pH sensors with LoRaWAN gateways.',
+      'Participate in hardware breadboard testing and PCB soldering.',
+      'Document experimental sensor logs and MQTT telemetry feeds.'
+    ],
+    requirements: [
+      '2025/2026 Batch B.Tech / B.E in ECE, EEE, CSE, or Instrumentation.',
+      'Strong fundamental understanding of C programming and microcontroller architecture.',
+      'Passion for hands-on electronics hardware and Internet of Things (IoT).',
+      'Final year academic project in embedded systems is an added advantage.'
+    ],
+    perks: ['Direct NIT incubation lab access', 'Full-time absorption at ₹4.2 LPA post training', 'Certificate of research internship', 'Patent co-authorship possibilities']
+  },
+  {
+    id: 'job-12',
+    title: 'Customer Relationship Associate (Branch Banking)',
+    company: 'Godavari Commercial Bank',
+    town: 'Bhimavaram',
+    locationDetail: 'PP Road, Bhimavaram',
+    category: 'fresher-opportunities',
+    employmentType: 'Full-time',
+    workMode: 'On-site',
+    experience: 'Fresher / 0 - 1 Year',
+    isFresher: true,
+    salary: '₹2.8 - ₹3.4 LPA',
+    postedDaysAgo: '2 days ago',
+    urgency: 'Active Demo Opening',
+    verificationStatus: 'Illustrative Preview',
+    description: 'Assist branch customers with digital banking onboarding, account openings, debit card activations, KYC updates, and promote savings and fixed deposit schemes.',
+    responsibilities: [
+      'Assist walk-in clients with mobile banking app setup and net-banking logins.',
+      'Verify KYC identity documents (Aadhaar, PAN) as per RBI norms.',
+      'Support customer service desk with cheque collection and inquiry handling.',
+      'Explain bank retail deposit products and loan schemes to small business proprietors.'
+    ],
+    requirements: [
+      'Any Bachelor degree (B.Com, B.Sc, BBA, BA) with minimum 55% marks.',
+      'Strong interpersonal and relationship management skills.',
+      'Polished appearance and comfortable in spoken Telugu & English.',
+      'Basic familiarity with computer operations.'
+    ],
+    perks: ['Comprehensive banking training programme', 'Incentives on quarterly retail targets', 'Health & term life insurance', 'Clear annual appraisal ladder']
+  }
+];

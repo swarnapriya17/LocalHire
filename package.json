@@ -1,0 +1,21 @@
+{
+  "name": "localhire-workspace",
+  "version": "1.0.0",
+  "description": "LocalHire - Local Job Portal for West Godavari District, Andhra Pradesh",
+  "private": true,
+  "scripts": {
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build:client": "npm --prefix client run build",
+    "start:server": "npm --prefix server start",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "job-portal",
+    "andhra-pradesh",
+    "west-godavari",
+    "localhire"
+  ],
+  "author": "LocalHire Team",
+  "license": "ISC"
+}
